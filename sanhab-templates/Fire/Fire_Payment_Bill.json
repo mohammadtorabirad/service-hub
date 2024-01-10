@@ -1,0 +1,320 @@
+{
+  "$id": "https://example.com/arrays.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A representation of a person, company, organization, or place",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["CmpDocNo","FirDocLosCod","PayDte","Hvno","Amnt","CurCod","LosRcvTypCod","HvTypCod","IsCncl","IsFrgn" ],
+  "properties": {
+
+    "CmpDocNo": {
+      "type": "string",
+      "description": "کد یونیک حواله خسارت در شرکت"
+    },
+    "FirDocLosCod": {
+      "type": "number",
+      "description": "کد یکتا پرونده خسارت"
+    },
+    "PayDte": {
+      "type": "string",
+      "description": "تاریخ صدور حواله خسارت"
+    },
+    "LglRefDte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "تاریخ مراجعه به مراجع قانونی"
+    },
+    "Hvno": {
+      "type": "number",
+      "description": "شماره حواله خسارت"
+    },
+    "Amnt": {
+      "type": "number",
+      "description": "مبلغ کل خسارت"
+    },
+    "PayAmnt": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "مبلغ خسارت پرداخت شده"
+    },
+    "Rcy": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "هزینه بازیافت"
+    },
+    "CurCod": {
+      "type": "number",
+      "description": "کد ارز"
+    },
+    "Frnshz": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "فرانشیز"
+    },
+    "LosRcvTypCod": {
+      "type": "number",
+      "description": "کد نوع گیرنده خسارت"
+    },
+    "HvTypCod": {
+      "type": "number",
+      "description": "کد نوع حواله"
+    },
+    "IsCncl": {
+      "type": "boolean",
+      "description": "ابطالی است؟"
+    },
+    "RcvFNam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "نام گیرنده حقیقی"
+    },
+    "RcvLNam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "نام خانوادگی گیرنده حقیقی"
+    },
+    "RcvNtnlId": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "کد ملی گیرنده حقیقی"
+    },
+    "RcvBrthDte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "تاریخ تولد گیرنده حقیقی"
+    },
+    "RcvLglId": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "شناسه ملی گیرنده حقوقی"
+    },
+    "RcvLglNam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "نام گیرنده حقوقی"
+    },
+    "PsprtNo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "شماره پاسپورت"
+    },
+    "IsFrgn": {
+      "type": "boolean",
+      "description": "خارجی است؟"
+    },
+    "CurrencySource": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "منشا ارز"
+    },
+    "RcvShebaNo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "شماره شبای گیرنده حواله خسارت"
+    },
+    "CardexInqCode": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "کد استعلام انبار"
+    },
+
+    "fruits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "LosGoods": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/goods"
+      }
+    },
+    "losCardexGoods": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/lostcartexgoods"
+      }
+    },
+    "firLosCvrs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/fireLostCover"
+      }
+    }
+
+  },
+  "$defs": {
+    "fireLostCover": {
+      "type": "object",
+      "required": [
+        "CvrCod"
+      ],
+      "properties": {
+        "InsrdCmpDocNo": {
+          "type": "string",
+          "description": "کد یکتا مورد بیمه نامه در شرکت"
+        },
+        "CvrCod": {
+          "type": "number",
+          "description": "کد پوشش"
+        }
+      },
+      "PayAmnt": {
+        "type": "number",
+        "description": "مبلغ خسارت پرداخت شده"
+      }
+    } ,
+    "goods": {
+      "type": "object",
+      "required": ["InsrdCmpDocNo","PostalCode"],
+      "properties": {
+
+        "InsrdCmpDocNo": {
+          "type": "string",
+          "description": "کد مورد بیمه در شرکت"
+        },
+        "PostalCode": {
+          "type": "string",
+          "description": "کد پستی"
+        },
+        "OwnerNationalId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "کد ملی مالک کالا"
+        },
+        "RemovableCount": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "مقدار موجودی کالا"
+        },
+        "MeasurementUnit": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "واحد اندازه گیری"
+        },
+        "GoodsId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شناسه کالا"
+        },
+        "GoodsDesc": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "نام کالا"
+        },
+        "Cptl": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "سرمایه"
+        },
+        "CptlCurCod": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "کد ارز سرمایه"
+        }
+
+      }
+    } ,
+    "lostcartexgoods": {
+      "type": "object",
+      "required": ["CardexCode"],
+      "properties": {
+        "CardexCode": {
+          "type": "number",
+          "description": "کد کالا"
+        },
+        "GoodsDesc": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "نام کالا"
+        },
+        "GoodsId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شناسه کالا"
+        },
+        "MeasurementUnit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "واحد اندازه گیری، شامل یکی از موارد زیر است:"
+        },
+        "ModifyDate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "تاریخ ویرایش"
+        },
+        "ProductionType": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "نوع تولید"
+        },
+        "RemovableCount": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "مقدار موجودی کالا"
+        },
+        "required": [
+          "CardexCode"
+        ]
+      }
+    }
+  }
+}
+
+

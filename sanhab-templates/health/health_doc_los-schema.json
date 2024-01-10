@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/HealthDocLoss",
+  "definitions": {
+    "HealthDocLoss": {
+      "type": "object",
+      "required": [
+        "PolicyUniqueCode",
+        "ExternalNumber",
+        "FileCreationDate",
+        "InformDate",
+        "DeliverDate",
+        "LossDocumentStatusTypeId",
+        "StatusDate"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "PolicyUniqueCode": {
+          "type": "number",
+          "description": "کد یکتای بیمه نامه"
+        },
+        "IntroductionLetterUniqueCode": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "کدیکتای معرفینامه"
+        },
+        "ExternalNumber": {
+          "type": "string",
+          "description": "شماره یونیک پرونده خسارت در شرکت"
+        },
+        "FileCreationDate": {
+          "type": "date",
+          "description": "تاریخ تشکیل پرونده"
+        },
+        "InformDate": {
+          "type": "date",
+          "description": "تاریخ اعلام خسارت"
+        },
+        "DeliverDate": {
+          "type": "date",
+          "description": "تاریخ تحویل مدارک خسارت"
+        },
+        "LossDocumentStatusTypeId": {
+          "type": "number",
+          "description": "کد وضعیت پرونده خسارت"
+        },
+        "StatusDate": {
+          "type": "date",
+          "description": "تاریخ وضعیت پرونده خسارت"
+        },
+        "BranchId": {
+          "type": "number",
+          "description": "کد یکتا شعبه در بیمه مرکزی (تشکیل پرونده خسارت)"
+        },
+        "AgencyId": {
+          "type": "number",
+          "description": "کد یکتا نماینده در بیمه مرکزی (تشکیل پرونده خسارت)"
+        }
+      },
+      "title": "HealthDocLoss"
+    }
+  }
+}

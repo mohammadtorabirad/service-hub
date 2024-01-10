@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/GenRegProposal",
+  "definitions": {
+    "GenRegProposal": {
+      "type": "object",
+	  "required" : [ "PrntCmpDocNo","MapFldDtlCod","PrsnTypCod","CorTypCod","InsNam","IsuDte","CurCod","MapCorTypCod"],
+      "additionalProperties": true,
+      "properties": {
+	  
+          "PrntCmpDocNo":{"type":"string","description":"شماره چاپی پیشنهاد بیمه نامه"},
+          "CmpDocNo":{"type":["string","null"],"description":"شماره یکتا پیشنهاد بیمه نامه"},
+          "MapFldDtlCod":{"type":"string","description":"کد رشته در شرکت"},
+          "MapBrnhCod":{"type":["string","null"],"description":"کد شعبه در شرکت"},
+          "MapAgncCod":{"type":["string","null"],"description":"کد نمایندگی در شرکت"},
+          "MapBrkrCod":{"type":["string","null"],"description":"کد کارگزار در شرکت"},
+          "PrsnTypCod":{"type":"string","description":"کد نوع شخصیت بیمه گذار"},
+          "CorTypCod":{"type":"string","description":"کد نوع گروه بندی بیمه نامه"},
+          "InsNam":{"type":"string","description":"نام بیمه گذار"},
+          "NtnlId":{"type":["string","null"],"description":"کد ملی حقیقی ایرانی یا شماره پاسپورت اشخاص حقیقی خارجی یا شناسه ملی اشخاص حقوقی ایرانی یا خارجی"},
+          "Tel":{"type":["string","null"],"description":"تلفن بیمه گذار"},
+          "Mbl":{"type":["string","null"],"description":"موبایل بیمه گذار"},
+          "ZipCod":{"type":["string","null"],"description":"کد پستی بیمه گذار/در رشته آتش سوزی انبارها کد پستی مورد بیمه"},
+          "IsuDte":{"type":"string","description":"تاریخ صدور بیمه نامه(شمسی)"},
+          "BgnDte":{"type":["string","null"],"description":"تاریخ شروع بیمه نامه (شمسی)"},
+          "EndDte":{"type":["string","null"],"description":"تاریخ پایان بیمه نامه (شمسی)"},
+          "Prm":{"type":["number","null"],"description":"مبلغ حق بیمه (خالص بدون مالیات و عوارض) در رشته های زندگی جمع کل حق بیمه در طول مدت اعتبار بیمه نامه لحاظ گردد"},
+          "Cptl":{"type":["number","null"],"description":"ارزش سرمایه بیمه نامه (حداکثر تعهد در طول بیمه نامه)"},
+          "Tax":{"type":["number","null"],"description":"مالیات بیمه نامه"},
+          "Tol":{"type":["number","null"],"description":"عوارض بیمه نامه"},
+          "CurCod":{"type":"number","description":"کد نوع ارز  استاندارد حق بیمه"},
+          "Isu":{"type":["number","null"],"description":"مبلغ حق صدور بیمه نامه(کارمزد بابت صدور بیمه نامه )"},
+          "Wag":{"type":["number","null"],"description":"مبلغ کارمزد بیمه نامه (کارمزد بابت معرفی بیمه نامه)"},
+          "Rct":{"type":["number","null"],"description":"مبلغ حق وصول (کارمزد بابت وصول حق بیمه )"},
+          "MapIntrCod":{"type":["string","null"],"description":"کد معرف"},
+          "PsngrTrckCod":{"type":["string","null"],"description":"کد رهگیری در رشته درمان مسافرین ورودی به ایران"},
+          "CmpCntrctCod":{"type":["number","null"],"description":"کد قرار داد "},
+          "PrdCod":{"type":["number","null"],"description":"کد محصول بیمه نامه (مطابق با جدول کد محصول بیمه نامه)نامه ارسالی ریاست کل به شماره 28066/100/98"},
+          "CptlCurCod":{"type":["number","null"],"description":"کد نوع ارز سرمایه استاندارد "},
+          "MapCorTypCod":{"type":"string","description":"کد وضعیت گروهبندی بیمه نامه در شرکت"},
+          "LglId":{"type":["string","null"],"description":"شناسه حقوقی"},
+          "IsIrn":{"type":["number","null"],"description":"آیا بیمه گذار ایرانی است؟(1=بله، 0= خیر)"},
+          "PassNo":{"type":["string","null"],"description":"شماره پاسپورت اتباع"}
+      },
+      "title": "Gen_Register_Proposal"
+    }
+  }
+}
+
+
+

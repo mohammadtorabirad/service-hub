@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required" : [ "PolicyId" , "PaymentAmount" ,"PaymentDate","InstallmentNo" ],
+  "additionalProperties": true,
+  "properties": {
+       "PolicyId":{"type":"number","description":"كد یکتا بیمه نامه/ الحاقیه"},
+       "PaymentAmount":{"type":"number","description":"مبلغ وصول شده"},
+       "PaymentDate":{"type":"number","description":"تاریخ وصول"},
+	   "InstallmentNo":{"type":"number","description":"شماره قسط"}
+      } 
+}

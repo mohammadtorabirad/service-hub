@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/CarDamagePayment",
+  "definitions": {
+    "CarDamagePayment": {
+      "type": "object",
+      "required" : [ "WbsCarDocLosUnqCod","PrntCmpDocNo","ThrPayTypCod","PayDte"],
+      "additionalProperties": true,
+      "properties": {
+        "WbsCarDocLosPrsnUnqCod":{"type":["number","null"],"description":"کد زیان دیده (کد یکتایی که در هنگام ثبت زیاندیده دریافت شده است در این فیلد قرار دهید )"},
+        "WbsCarDocLosUnqCod":{"type":"number","description":"کد پرونده خسارت"},
+        "PrntCmpDocNo":{"type":"string","description":"شماره یونیک حواله  خسارت"},
+        "ThrPayTypCod":{"type":"number","description":"کد نوع پرداخت خسارت"},
+        "PayDte":{"type":"string","description":"تاريخ شمسی پرداخت خسارت"},
+        "PrsnDocLosCmpDocNo":{"type":["string","null"],"description":"شماره زیان دیده خسارت فعلی"},
+        "EstLfAmnt":{"type":["number","null"],"description":"مبلغ ديه تقريبي به تناسب صدمه بدني وارده (غيرازفوت)-طبق ارقام اعلام شده توسط قوه قضائيه"},
+        "CrtDte":{"type":["string","null"],"description":"تاریخ قطعیت رای دادگاه"},
+        "LfAmnt":{"type":["number","null"],"description":"ميزان دیه متعلقه (قطعي شده) براساس رای قطعی دادگاه"},
+        "PayAmnt":{"type":["number","null"],"description":" مبلغ پرداخت شده بابت خسارت"},
+        "RcvNtnlId":{"type":["string","null"],"description":"کد ملی گیرنده خسارت (حقیقی)"},
+        "RcvBrthdte":{"type":["string","null"],"description":"تاریخ تولد گیرنده خسارت حقیقی"},
+        "RcvNam":{"type":["string","null"],"description":"نام گیرنده خسارت حقیقی یا حقوقی"},
+        "Exp":{"type":["number","null"],"description":"ميزان هزینه کارشناسی (طبق مندرجات پرونده خسارت)–"},
+        "Rcy":{"type":["number","null"],"description":"ميزان خسارت بازيافت واقعي ازمسبب حادثه بابت خسارت بدني پرداختي (طبق مندرجات پرونده خسارت)"},
+        "RcvLglId":{"type":["string","null"],"description":"شناسه ملی اشخاص حقوقی(گیرنده خسارت)"},
+        "ThrRcyTypCod":{"type":["string","null"],"description":"نوع خسارت بازیافتی"},
+        "EvlNtnlId":{"type":["string","null"],"description":"کدملی ارزیاب خسارت"},
+        "EvlLglId":{"type":["string","null"],"description":"شناسه ملی حقوقی ارزیاب خسارت"},
+        "IsIrn":{"type":["number","null"],"description":"آیا گیرنده خسارت ایرانی است؟ 1= بله  0= خیر"},
+        "UnIrnCod":{"type":["string","null"],"description":"کدشناسایی اتباع غیرایرانی"},
+        "RcvTypCod":{"type":["string","null"],"description":"نوع گیرنده خسارت"},
+        "RcvAcntNo":{"type":["string","null"],"description":"شماره شبای گیرنده خسارت"}
+      },
+      "title": "carDamagePayment"
+    }
+  }
+}

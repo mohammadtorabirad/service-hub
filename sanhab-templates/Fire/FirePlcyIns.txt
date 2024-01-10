@@ -1,0 +1,31 @@
+<fir:FirPlcyIns>
+   <fir:Adrs>${Adrs}</fir:Adrs>
+   <!--Optional:-->
+   <fir:BrthDate>${BrthDate}</fir:BrthDate>
+   <!--Optional:-->
+   <fir:CtyId>${CtyId}</fir:CtyId>
+   <!--Optional:-->
+   <fir:InsTypCod>${InsTypCod}</fir:InsTypCod>
+   <!--Optional:-->
+   <fir:IsFrgn>${IsFrgn}</fir:IsFrgn>
+   <!--Optional:-->
+   <fir:LNam>${LNam}</fir:LNam>
+   <!--Optional:-->
+   <fir:LglId>${LglId}</fir:LglId>
+   <!--Optional:-->
+   <fir:LglNam>${LglNam}</fir:LglNam>
+   <!--Optional:-->
+   <fir:Mbl>${Mbl}</fir:Mbl>
+   <!--Optional:-->
+   <fir:Nam>${Nam}</fir:Nam>
+   <!--Optional:-->
+   <fir:NtnlId>${NtnlId}</fir:NtnlId>
+   <!--Optional:-->
+   <fir:PrsnTypCod>${PrsnTypCod}</fir:PrsnTypCod>
+   <!--Optional:-->
+   <fir:PsprtNo>${PsprtNo}</fir:PsprtNo>
+   <!--Optional:-->
+   <fir:Tel>${Tel}</fir:Tel>
+   <!--Optional:-->
+   <fir:ZipCod>${ZipCod}</fir:ZipCod>
+</fir:FirPlcyIns>

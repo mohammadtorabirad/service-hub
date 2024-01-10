@@ -1,0 +1,12 @@
+<fir:FirPlcyPay>
+    <!--Optional:-->
+    <fir:AncDte>${AncDte}</fir:AncDte>
+    <!--Optional:-->
+    <fir:PayNo>${PayNo}</fir:PayNo>
+    <!--Optional:-->
+    <fir:RctDte>${RctDte}</fir:RctDte>
+    <!--Optional:-->
+    <fir:ToPayDte>${ToPayDte}</fir:ToPayDte>
+    <!--Optional:-->
+    <fir:Val>${Val}</fir:Val>
+</fir:FirPlcyPay>

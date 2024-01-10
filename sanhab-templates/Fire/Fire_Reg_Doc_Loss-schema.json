@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/FireDocLoss",
+  "definitions": {
+    "FireDocLoss": {
+      "type": "object",
+      "required" : [ "CmpDocNo","FirPlcyCod","OcrDte","FleDte","AncDte"],
+      "additionalProperties": true,
+      "properties": {
+            "CmpDocNo":{"type":"string","description":"کد یونیک پرونده خسارت در شرکت"},
+            "FirPlcyCod":{"type":"number","description":"کد یکتا بیمه نامه"},
+            "AgncFldCod":{"type":["number","null"],"description":"کد یکتا نماینده در بیمه مرکزی (تشکیل پرونده خسارت)"},
+            "BrnhFldCod":{"type":["number","null"],"description":"کد یکتا شعبه در بیمه مرکزی (تشکیل پرونده خسارت)"},
+            "OcrDte":{"type":"DateTime","description":"تاريخ و ساعت وقوع حادثه"},
+            "FleDte":{"type":"DateTime","description":"تاریخ تشکیل پرونده خسارت"},
+            "AncDte":{"type":"DateTime","description":"تاريخ اعلام حادثه"},
+            "WrhInqCod":{"type":["number","null"],"description":"کد پیگیری استعلام از سامانه جامع انبارها"},
+            "WbsDocLosCod":{"type":["number","null"],"description":"شماره پرونده خسارت در سرویس مشترکات"}
+      },
+      "title": "FireDocLoss"
+    }
+  }
+}
+
+
+

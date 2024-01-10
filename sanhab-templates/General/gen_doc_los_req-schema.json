@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/GenDocLosReq",
+  "definitions": {
+    "GenDocLosReq": {
+      "type": "object",
+      "required" : [ "MapFldDtlCod","CmpDocNo","PlcyUnqCod","CorTypCod","FleDte","OcrDte","AncDte","MapCorTypCod"],
+      "additionalProperties": true,
+      "properties": {
+	  
+	        "MapFldDtlCod":{"type":"string","description":"کد رشته پرونده در شرکت-کد رشته در پرونده خسارت با کد رشته در بیمه نامه یکسان باشد"},
+            "CmpDocNo":{"type":"string","description":"شماره پرونده خسارت در شرکت (در تمامی پرونده های خسارت ثبت شده توسط شرکت باید یونیک باشد)"},
+            "PrntCmpdocNo":{"type":["string","null"],"description":"شماره پرونده چاپی خسارت در شرکت"},
+            "PlcyUnqCod":{"type":"string","description":"کد یکتای بیمه نامه پرونده خسارت در شرکت - در خصوص بیمه نامه های ارسال شده با نسخه 1 و 2 وب سرویس دریافت اطلاعات  بیمه نامه کد یونیک بیمه نامه (UnqCod) که 26 کاراکتر بوده است را می توانید در همین فیلد ارسال نمایید."},
+            "EdrsUnqCod":{"type":["string","null"],"description":"کد یکتای الحاقیه پرونده خسارت در شرکت – (در صورت وجود)"},
+            "MapBrnhCod":{"type":["string","null"],"description":"کد شعبه پرونده خسارت در شرکت"},
+            "MapAgncCod":{"type":["string","null"],"description":"کد نمایندگی پرونده خسارت در شرکت"},
+            "CorTypCod":{"type":"string","description":"کد نوع گروهبندی"},
+            "FleDte":{"type":"string","description":"تاریخ تشکیل پرونده خسارت (شمسی)"},
+            "OcrDte":{"type":"string","description":"تاریخ وقوع خسارت (شمسی)"},
+            "AncDte":{"type":"string","description":"تاریخ اعلام خسارت (شمسی)"},
+            "LosEvl":{"type":["string","null"],"description":"نام ارزیاب خسارت"},
+            "LosEvlNtnlId":{"type":"string","description":"Yes"},
+            "MapCorTypCod":{"type":"string","description":"کد نوع گروهبندی پرونده خسارت در شرکت"}
+      },
+      "title": "Gen_Doc_Los_Req"
+    }
+  }
+}
+
+
+

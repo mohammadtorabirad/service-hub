@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/GenRegLos",
+  "definitions": {
+    "GenRegLos": {
+      "type": "object",
+      "required" : [ "MapFldDtlCod","CmpDocNo","DocLosUnqCod","CorTypCod","CurCod","PayDte","MapCorTypCod"],
+      "additionalProperties": true,
+      "properties": {
+		  "MapFldDtlCod":{"type":"string","description":"کد رشته حواله خسارت در شرکت(کد رشته در حواله با کد رشته در پرونده خسارت یکی باشد )"},
+          "PrntCmpDocNo":{"type":["string","null"],"description":"شماره حواله چاپی خسارت در شرکت"},
+          "CmpDocNo":{"type":"string","description":"شماره حواله یونیک به ازای هر پرداخت خسارت در سیستم بیمه گری  شرکت"},
+          "DocLosUnqCod":{"type":"number","description":"کد یکتای پرونده خسارت"},
+          "MapBrnhCod":{"type":["string","null"],"description":"کد شعبه خسارت در شرکت"},
+          "MapAgncCod":{"type":["string","null"],"description":"کد نمایندگی خسارت در شرکت"},
+          "CorTypCod":{"type":"string","description":""},
+          "CurCod":{"type":"string","description":"کد نوع ارز"},
+          "PayDte":{"type":"string","description":"تاریخ پرداخت خسارت در شرکت"},
+          "Amnt":{"type":["number","null"],"description":"مبلغ کل خسارت (برآوردی)"},
+          "PayAmnt":{"type":["number","null"],"description":"مبلغ خسارت پرداخت شده"},
+          "Rtn":{"type":["number","null"],"description":"مبلغ خسارت برگشتی"},
+          "RtnRcy":{"type":["number","null"],"description":"مبلغ خسارت برگشتی بازیافتی"},
+          "Rcy":{"type":["number","null"],"description":"مبلغ خسارت بازیافتی"},
+          "Exp":{"type":["number","null"],"description":"مبلغ هزینه ارزیابی یا کارشناسی خسارت(فقط ارزیابان مجاز بیمه مرکزی-پرسنل شرکت مجاز نمی باشند) "},
+          "RtnExp":{"type":["number","null"],"description":"مبلغ هزینه ارزیابی یا کارشناسی خسارت برگشتی (فقط ارزیابان مجاز بیمه مرکزی-پرسنل شرکت مجاز نمی باشند)"},
+          "LosRcv":{"type":["string","null"],"description":"نام و نام خانوادگی شخص حقیقی یا حقوقی گیرنده خسارت"},
+          "LosRcvNtnlId":{"type":["string","null"],"description":"کد ملی شخص حقیقی ایرانی(در صورتی که فرد خارجی باشد شماره گذرنامه فرد را وارد نمایید) گیرنده خسارت"},
+          "RcvLglId":{"type":["string","null"],"description":"کد ملی اشخاص حقوقی ایرانی(در صورتی که فرد خارجی باشد شماره گذرنامه فرد را وارد نمایید) گیرنده خسارت"},
+          "EvlNtnlId":{"type":["string","null"],"description":"کد ملی ارزیاب حقیقی"},
+          "EvlLglId":{"type":["string","null"],"description":"شناسه ملی ارزیاب حقوقی"},
+          "IsIrn":{"type":["number","null"],"description":"آیا گیرنده خسارت ایرانی است ؟ 1- ایرانی 0 –غیر ایرانی"},
+          "UnIrnCod":{"type":["string","null"],"description":"شماره پاسپورت( یا شماره اتباع)"},
+          "prdCod":{"type":["number","null"],"description":"کد محصول بیمه نامه (مطابق با جدول کد محصول بیمه نامه)نامه ارسالی ریاست کل به شماره 28066/100/98"},
+          "MapCorTypCod":{"type":"string","description":"کد نوع گروهبندی خسارت در شرکت"}
+      },
+      "title": "Gen_Reg_Los"
+    }
+  }
+}
+
+
+

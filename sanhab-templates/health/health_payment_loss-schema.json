@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/HealthPaymentLoss",
+  "definitions": {
+    "HealthPaymentLoss": {
+      "type": "object",
+      "required": [
+        "LossDocumentUniqueCode",
+        "LossNumber",
+        "LossIssueDate",
+        "LossTypeId",
+        "LossAmount",
+        "PaymentDate",
+        "RecycleCauseId",
+        "LossReceiverTypeId",
+        "LossReceivePersonTypeId",
+        "ShebaNo",
+        "PaidMoneyDescription"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "LossDocumentUniqueCode": {
+          "type": "number",
+          "description": "کد یکتا پرونده خسارت(کلید اصلی جدول پرونده خسارت)"
+        },
+        "LossNumber": {
+          "type": "string",
+          "description": "شماره حواله خسارت"
+        },
+        "LossIssueDate": {
+          "type": "date",
+          "description": "تاریخ صدور حواله خسارت"
+        },
+        "LossTypeId": {
+          "type": "number",
+          "description": "کد نوع حواله"
+        },
+        "LossAmount": {
+          "type": "number",
+          "description": "مبلغ حواله"
+        },
+        "PaymentDate": {
+          "type": "DateTime",
+          "description": "تاریخ واریز وجه"
+        },
+        "RecycleAmount": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "مبلغ بازیافت"
+        },
+        "RecycleCauseId": {
+          "type": "number",
+          "description": "کد علت بازیافت"
+        },
+        "LossReceiverTypeId": {
+          "type": "number",
+          "description": "کد نوع گیرنده خسارت"
+        },
+        "LossReceivePersonTypeId": {
+          "type": "number",
+          "description": "کد نوع شخصیت گیرنده خسارت"
+        },
+        "ReceiverFirstName": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "نام گیرنده حقیقی"
+        },
+        "ReceiverLastName": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "نام خانوادگی گیرنده حقیقی"
+        },
+        "ReceiverNationalId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "کد ملی گیرنده حقیقی"
+        },
+        "ReceiverBirthDate": {
+          "type": [
+            "DateTime",
+            "null"
+          ],
+          "description": "تاریخ تولد گیرنده حقیقی"
+        },
+        "ReceiverLegalEntityNationalCode": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شناسه ملی گیرنده حقوقی"
+        },
+        "ReceiverLegalEntityName": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "نام گیرنده حقوقی"
+        },
+        "LossReceiverForeignNationalCode": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شماره پاسپورت یا کد اتباع خارجی گیرنده خسارت"
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "توضیحات"
+        },
+        "ShebaNo": {
+          "type": "string",
+          "description": "کد شبا"
+        },
+        "PaidMoneyDescription": {
+          "type": "string",
+          "description": "شرح پرداخت خسارت"
+        }
+      },
+      "title": "HealthPaymentLoss"
+    }
+  }
+}

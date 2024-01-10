@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required" : [ "IsEndorsement","PrintNumber","PolicyTypeId","BeginDate","EndDate","IssueDate","NoLossYearsCount","Tax",
+    "Toll","Premium","Capital","VehicleCylinderTypeId","ChassisNumber","MotorNumber","VIN","VehicleProductYear",
+    "VehicleGroupId","VehicleUsageId","VehicleSystemId","PlateLetterId","PlatePartThree","FullPlateNumber",
+    "PlateTypeId","SpareTypeId","VehicleTypeId","VehiclePassengerCount","Duration","PermitTitle","PermitCode"],
+
+  "additionalProperties": true,
+  "properties": {
+
+      "IsEndorsement":{"type":"boolean","description":"بله 1 خیر 0"},
+      "EndorsementPolicyId":{"type":"number","description":"كد یکتای بیمه نامه الحاقیه"},
+      "ContractId":{"type":"number","description":"كد یکتا قرارداد"},
+      "PrintNumber":{"type":"string","description":"برای شماره چاپی بیمه نامه مشابه رشته ثالث، از شمارهرایانه بیمه نامه (شناسه بیمه نامه در رشته) اقدام شود."},
+      "PolicyTypeId":{"type":"number","description":"-1-3 جدول نوع بیمه نامه )PolicyType("},
+      "BeginDate":{"type":"string","description":"تاریخ شروع"},
+      "EndDate":{"type":"string","description":"تاریخ پایان"},
+      "IssueDate":{"type":"string","description":"تاریخ صدور"},
+      "BranchId":{"type":"number","description":"كد شعبه صادر كننده در بیمه مركزی"},
+      "BrokerId":{"type":"number","description":"كد كارگزار در بیمه مركزی"},
+      "AgencyId":{"type":"number","description":"كد نماینده صادر كننده در بیمه مركزی"},
+      "IntroducerAgencyId":{"type":"number","description":"كد نماینده معرف در بیمه مركزی"},
+      "IntroducerBranchId":{"type":"number","description":"كد شعبه معرف در بیمه مركزی"},
+      "PreviousId":{"type":"number","description":"كد یکتا بیمه نامه سال قبل"},
+      "EndorsementNumber":{"type":"number","description":"شماره توالی الحاقیه"},
+      "EndorsemenPremium":{"type":"number","description":"حق بیمه الحاقیه"},
+      "EndorsementActDate":{"type":"string","description":"تاریخ اثر الحاقیه"},
+      "EndorsementTypeId":{"type":"number","description":"-3-3 جدول نوع الحاقیه )EndorsementType("},
+      "EndorsementDescription":{"type":"string","description":"توضیحات الحاقیه"},
+      "EndorsementCauseId":{"type":"number","description":"-2-3 جدول علت الحاقیه )EndorsementCause("},
+      "TechnicalInitialVisitDate":{"type":"string","description":"تاریخ كارشناسی بازدید اولیه"},
+      "NoLossYearsCount":{"type":"number","description":"تعداد سال عدم خسارت"},
+      "Tax":{"type":"number","description":"مالیات"},
+      "Toll":{"type":"number","description":"عوارض"},
+      "Premium":{"type":"number","description":"حق بیمه"},
+      "Capital":{"type":"number","description":"سرمایه"},
+      "VehicleCylinderTypeId":{"type":"number","description":"-5-3 جدول تعداد سیلندر)VehicleCylinderType(خودرو"},
+      "VehicleDriversCount":{"type":"number","description":"تعداد رانندگان خودرو"},
+      "VehicleEngineDisplacementId":{"type":["number","null"],"description":"حجم موتور"},
+      "VehicleAllowedAreaId":{"type":["number","null"],"description":"deascription                                      "},
+      "VehicleWeightClassId":{"type":["number","null"],"description":"deascription"},
+      "IsPayAtOnce":{"type":"boolean","description":"بصورت نقدی است(یکجا)"},
+      "ChassisNumber":{"type":"string","description":"شماره شاسی"},
+      "MotorNumber":{"type":"string","description":"شماره موتور"},
+      "VIN":{"type":"string","description":"VIN"},
+      "VehicleProductYear":{"type":"number","description":"سال ساخت خودرو"},
+      "VehicleGroupId":{"type":"number","description":""},
+      "VehicleUsageId":{"type":"number","description":""},
+      "VehicleSystemId":{"type":"number","description":""},
+      "PlatePartOne":{"type":"number","description":"پالک ملی 1"},
+      "PlateLetterId":{"type":"number","description":""},
+      "PlatePartThree":{"type":"number","description":""},
+      "PlateSerialNumber":{"type":"number","description":"سریال پالک ملیسریال پالک ملی/یا 3 رقم شماره سریال موتورسیکلت"},
+      "FullPlateNumber":{"type":"string","description":"پالک كامل"},
+      "PlateTypeId":{"type":"number","description":""},
+      "SpareTypeId":{"type":"number","description":""},
+      "VehicleTypeId":{"type":"number","description":""},
+      "VehiclePassengerCount":{"type":"number","description":"تعداد سرنشینان خودرو"},
+      "Duration":{"type":"number","description":"مدت بیمه (به روز)"},
+      "PermitExpirationDate":{"type":"string","description":"تاریخ اتمام مجوز ارائه نرخ"},
+      "PermitTitle":{"type":"string","description":"عنوان طرح دارای شماره مجوز صدور از بیمه مركزی"},
+      "PermitCode":{"type":"number","description":"شماره مجوز استعالم نرخ"},
+      "PermitIssueDate":{"type":"string","description":"تاریخ صدور مجوز (تاریخ استعالم نرخ)"},
+      "PremiumChanges":{"type" : "array" , "items" : {"$ref" : "#/$defs/PremiumChange"}},
+      "PlanCoverages":{"type" : "array" , "items" : {"$ref" : "#/$defs/PlanCoverage"}},
+      "Insures":{"type" : "array" , "items" : {"$ref" : "#/$defs/Insure"}},
+      "VehicleEquipments":{"type" : "array" , "items" : {"$ref" : "#/$defs/PolicyVehicleEquipment"}}
+      } ,
+		
+      "$defs" : {
+		"PremiumChange" : {
+		  "type": "object",
+		  "required" : [ "PremiumChangeTypeId","Percent" , "Amount"],
+		  "additionalProperties": true,
+		  "properties": {
+		  	"PremiumChangeTypeId": {"type" : "number"  , "description" : "كد نوع تخفیفات و اضافه نرخ حق بیمه"},
+		  	"Percent" : {"type" : "string" , "description"  : "درصد تخفیفات و اضافه نرخ حق بیمه"},
+		  	"Amount":{"type": "number" ,"description":"مبلغ تخفیفات و اضافه نرخ حق بیمه"}
+			}			
+		} ,
+
+		"PlanCoverage" : {
+          "type": "object",
+          "required": [
+            "PlanCoverageTypeId",
+            "CalculatedPremiums",
+            "Premiums"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "PlanCoverageTypeId": {
+              "type": "number",
+              "description": "كد نوع پوشش"
+            },
+            "CalculatedPremiums": {
+              "type": "number",
+              "description": "حق بیمه بدون احتساب كسورات واضافات"
+            },
+            "Premiums": {
+              "type": "number",
+              "description": "حق بیمه با احتساب كسورات واضافات"
+            },
+            "EndorsementPremiums": {
+              "type": "number",
+              "description": "حق بیمه الحاقیه با احتساب كسورات و اضافات"
+            },
+            "CalculatedEndorsementPremium": {
+              "type": "number",
+              "description": "حق بیمه الحاقیه بدون احتساب كسوراتو اضافات"
+            },
+            "AuthorizationNumber": {
+              "type": "string",
+              "description": "شماره نامه دریافت مجوز"
+            },
+            "AuthorizationDate": {
+              "type": "string",
+              "description": "تاریخ دریافت مجوز"
+            }
+          }
+        } ,
+		"Insure" : {
+		  "type": "object",
+		  "required" : [ "InsurerTypeId","IsLegalPerson","IsIranian","CityId"],
+		  "additionalProperties": true,
+		  "properties": {
+		       "InsurerTypeId":{"type":"number","description":"No"},
+               "IsLegalPerson":{"type":"boolean","description":"آیا شخصیت حقوقی است؟"},
+               "LegalCode":{"type":["string","null"],"description":"شناسه ملی شخصیت حقوقی"},
+               "LegalName":{"type":["string","null"],"description":"نام شخصیت حقوقی"},
+               "FirstName":{"type":["string","null"],"description":"نام شخصیت حقیقی"},
+               "LastName":{"type":["string","null"],"description":"نام خانوادگی شخصیت حقیقی"},
+               "NationalCode":{"type":["string","null"],"description":"كد ملی شخصیت حقیقی"},
+               "AlienIdNumber":{"type":["string","null"],"description":"كد اتباع"},
+               "IsIranian":{"type":"boolean","description":"ایرانی 1 غیر ایرانی 0"},
+               "CityId":{"type":"number","description":""},
+               "Address":{"type":["string","null"],"description":"آدرس"},
+               "Tel":{"type":["string","null"],"description":"تلفن ثابت"},
+               "Mobile":{"type":["string","null"],"description":"شماره موبایل"},
+               "PostalCode":{"type":["number","null"],"description":"كد پستی"},
+               "BirthDate":{"type":["string","null"],"description":"تاریخ تولد"},
+               "IsMale":{"type":["boolean","null"],"description":"آیا شخصیت حقیقی مرد است؟"},
+               "EducationLevelId":{"type":["number","null"],"description":"كد تحصیالت"},
+               "JobId":{"type":["number","null"],"description":"كد شغل"},
+               "PassportNumber":{"type":["string","null"],"description":"شماره پاسپورت"}
+               }
+		} ,
+        "PolicyVehicleEquipment" : {
+          "type": "object",
+          "properties": {
+            "VehicleEquipmentId":{"type":"number","description":"امکانات ایمنی خودرو "}
+            }
+          }
+        }
+
+}

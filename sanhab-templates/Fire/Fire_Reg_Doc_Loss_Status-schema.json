@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/FireRegDocLossStatus",
+  "definitions": {
+    "FireRegDocLossStatus": {
+      "type": "object",
+      "required": [
+        "DocLosStsCod",
+        "FirDocLosCod"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "DocLosStsCod": {
+          "type": "number",
+          "description": "کد وضعیت پرونده خسارت"
+        },
+        "FirDocLosCod": {
+          "type": "number",
+          "description": "کد یکتا پرونده خسارت"
+        },
+        "CmplDte": {
+          "type": [
+            "DateTime",
+            "null"
+          ],
+          "description": "تاريخ تكميل پرونده"
+        },
+        "DocRcvDte": {
+          "type": [
+            "DateTime",
+            "null"
+          ],
+          "description": "تاریخ دریافت مدارک مورد نیاز برای پرداخت خسارت"
+        },
+        "AcpDte": {
+          "type": [
+            "DateTime",
+            "null"
+          ],
+          "description": "تاریخ پذیرش خسارت از سوی شرکت بیمه"
+        },
+        "NotDsrvDte": {
+          "type": [
+            "DateTime",
+            "null"
+          ],
+          "description": "احراز عدم استحقاق دريافت خسارت"
+        },
+        "RsltAncDte": {
+          "type": [
+            "DateTime",
+            "null"
+          ],
+          "description": "تاريخ اعلام نتیجه"
+        },
+        "FnlAmntDte": {
+          "type": [
+            "DateTime",
+            "null"
+          ],
+          "description": "تاريخ قطعي شدن مبلغ قابل پرداخت"
+        },
+        "HasCus": {
+          "type": [
+            "Boolean",
+            "null"
+          ],
+          "description": "آیا حادثه دارای مقصر است؟"
+        },
+        "CusFNam": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "نام مسبب حادثه حقیقی"
+        },
+        "CusLNam": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "نام خانوادگی مسبب حادثه حقیقی"
+        },
+        "CusNtnlId": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "کد ملی مسبب حادثه حقیقی"
+        },
+        "CusLglNam": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "نام مسبب حادثه حقوقی"
+        },
+        "CusLglId": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "شناسه ملی مسبب حادثه حقوقی"
+        }
+      },
+      "title": "FireRegDocLossStatus"
+    }
+  }
+}
+
+
+

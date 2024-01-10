@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required" : [ "PrIntNumber" , "LossDocumentId" ,"DraftIssuDate","PlanCoverage" , "TotalLossAmount","PayTypeId","LossNumber"],
+  "additionalProperties": true,
+  "properties": {
+       "PrIntNumber":{"type":"string","description":"شماره چاپی حواله خسارت"},
+       "LossDocumentId":{"type":"number","description":"كد یکتا پرونده خسارت"},
+       "DraftIssuDate":{"type":"string","description":"تاریخ صدور حواله"},
+       "InsurerLegalReferDate":{"type":"date","description":"تاریخ مراجعه بیمه گذار به مراجع قانونی"},
+       "CompanyLegalReferDate":{"type":"date","description":"تاریخ مراجعه بیمه گر به مراجع قانونی"},
+       "PlanCoverage":{"type" : "array" , "items" : {"$ref" : "#/$defs/PlanCoverageElement"}},
+       "TotalLossAmount":{"type":"number","description":"مبلغ كل خسارت"},
+       "TotalPaidAmount":{"type":"number","description":"مبلغ خسارت پرداخت شده"},
+       "FranchiseAmount":{"type":"number","description":"مبلغ فرانشیز"},
+       "PayTypeId":{"type":"number","description":" نوع پرداخت )PayType("},
+       "AccessorNationalCode":{"type":"string","description":"كد ملی ارزیاب حقیقی"},
+       "AccessorLegalCode":{"type":"string","description":"شناسه ملی موسسه ارزیابی"},
+       "AccessorFirstName":{"type":"string","description":"نام ارزیاب حقیقی"},
+       "AccessorLastName":{"type":"string","description":"نام خانوادگی ارزیاب حقیقی"},
+       "AccessorLegalName":{"type":"string","description":"عنوان موسسه ارزیاب"},
+       "AccessorTypeId":{"type":"number","description":"نوع ارزیاب "},
+       "Recipients":{"type" : "array" , "items" : {"$ref" : "#/$defs/Recipient"}},
+       "LossNumber":{"type":"number","description":"ردیف حواله"},
+       "RecycleCostAmount":{"type":"number","description":"مبلغ خسارت بازیافت"},
+       "ExpertAssessmentCostAmount":{"type":"number","description":"مبلغ هزینه كارشناسی"},
+       "FranchisePercent":{"type":"number","description":"درصد فرانشیز"},
+       "IsRecycle":{"type":"boolean","description":"آیا بازیافتی است؟"},
+       "RecycleTypeId":{"type":"number","description":" نوع بازیافت"}
+      } ,
+		
+      "$defs" : {
+		  "PlanCoverageElement" : {
+		  "type": "object",
+		  "properties": {
+                "PlanCoverageTypeId":{"type":"number","description":"نوع پوشش های بیمه نامه"}
+			}
+		  } ,
+        "Recipient" : {
+          "type": "object",
+          "required" : [ "PaidAmount","LossRecoverInsurerTypeId","IsLegalPerson","PayDate","IsIranian"],
+          "additionalProperties": true,
+          "properties": {
+
+               "PaidAmount":{"type":"number","description":"مبلغ خسارت پرداخت شده"},
+               "ShebaNumber":{"type":"string","description":"شماره شبا دریافت كننده خسارت"},
+               "LossRecoverInsurerTypeId":{"type":"number","description":"نوع دریافت كننده خسارت بیمه گذار/ذینفع"},
+               "NationalCode":{"type":"string","description":"كد ملی دریافت كننده خسارت"},
+               "LegalCode":{"type":"string","description":"شناسه حقوقی دریافت كننده خسارت"},
+               "IsLegalPerson":{"type":"boolean","description":"آیا دریافت كننده خسارت شخص حقوقی است؟"},
+               "FirstName":{"type":"string","description":"نام دریافت كننده خسارت"},
+               "LastName":{"type":"string","description":"نام خانوادگی دریافت كننده خسارت"},
+               "LegalName":{"type":"string","description":"نام حقوقی دریافت كننده خسارت"},
+               "PassportNumber":{"type":"string","description":"شماره پاسپورت"},
+               "AlienIdNumber":{"type":"string","description":"كد اتباع گیرنده خسارت"},
+               "PayDate":{"type":"string","description":"تاریخ پرداخت خسارت"},
+               "IsMale":{"type":"boolean","description":"جنسیت"},
+               "IsIranian":{"type":"boolean","description":"آیا ایرانی است ؟"},
+               "BirthDate":{"type":"string","description":"تاریخ تولد دریافت كننده خسارت (حقیقی)"}
+             }
+          }
+      }
+}

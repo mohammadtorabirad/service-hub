@@ -1,0 +1,3 @@
+<fir:FirPlcyGoodsGroupsLevelOne>
+    <fir:GoodsId>${GoodsId}</fir:GoodsId>
+</fir:FirPlcyGoodsGroupsLevelOne>

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required" :  ["Id", "PrintNumber","PolicyId","OccurredDate","FilingDate","AnnouncementDate","AccidentTypeId","HasCause","MarketValue","LossDocumentStatusId"],
+
+  "additionalProperties": true,
+  "properties": {
+
+      "Id":{"type":"number","description":"کد یکتای پرونده خسارت"},
+      "PrintNumber":{"type":"string","description":"شماره چاپی پرونده خسارت"},
+      "PolicyId":{"type":"number","description":"شناسه بیمه نامه/ الحاقیه"},
+      "OccurredDate":{"type":"string","description":"تاریخ و ساعت وقوع حادثه"},
+      "FilingDate":{"type":"string","description":"تاریخ تشکیل پرونده خسارت"},
+      "AnnouncementDate":{"type":"string","description":"تاریخ اعالم حادثه"},
+      "CompleteDate":{"type":"string","description":"تاریخ تکمیل پرونده"},
+      "AgencyId":{"type":"number","description":"(تشکیل پرونده خسارت) كد نماینده در بیمه مركزی"},
+      "BranchId":{"type":"number","description":"كد شعبه در بیمه مركزی   (تشکیل پرونده خسارت)"},
+      "AccidentTypeId":{"type":"number","description":" جدول نوع حادثه استاندارد"},
+      "HasCause":{"type":"boolean","description":"حادثه دارای مقصرشناسایی شده می باشد؟ بله 1 خیر 0"},
+      "TheftDate":{"type":"string","description":"تاریخ سرقت موضوع بیمه نامه بدنه اتومبیل"},
+      "DiscoverDate":{"type":"string","description":"تاریخ كشف موضوع بیمه نامه بدنه اتومبیل"},
+      "MarketValue":{"type":"number","description":"ارزش روز مورد بیمه"},
+      "ResolveDate":{"type":"string","description":"تاریخ حل وفصل از طریق مذاكره"},
+      "LossDocumentStatusId":{"type":"number","description":"-جدول وضعیت پرونده خسارت"},
+      "SatisfyDate":{"type":"string","description":"تاریخ اخذ رضایت نامه توسط شركت بیمه پرداخت كننده خسارت"},
+      "AccessorNationalCode":{"type":"string","description":"كد ملی ارزیاب حقیقی"},
+      "AccessorLegalCode":{"type":"string","description":"شناسه ملی موسسه ارزیابی"},
+      "AccessorFirstName":{"type":"string","description":"نام ارزیاب حقیقی"},
+      "AccessorLastName":{"type":"string","description":"نام خانوادگی ارزیاب حقیقی"},
+      "AccessorLegalName":{"type":"string","description":"عنوان موسسه ارزیاب"},
+      "AccessorTypeId":{"type":"number","description":" جدول نوع ارزیاب "},
+	  "AccidentCulprit":{"type" : "array" , "items" : {"$ref" : "#/$defs/AccidentCulpritElement"}}
+      } ,
+		
+      "$defs" : {
+		  "AccidentCulpritElement" : {
+		  "type": "object",
+		  "required" : [ "PaidAmount","LossRecoverInsurerTypeId","IsLegalPerson","PayDate","IsIranian"],
+		  "additionalProperties": true,
+		  "properties": {
+                "PaidAmount":{"type":"number","description":"مبلغ خسارت پرداخت شده"},
+                "ShebaNumber":{"type":"string","description":"شماره شبا دریافت كننده خسارت"},
+                "LossRecoverInsurerTypeId":{"type":"number","description":"نوع دریافت كننده خسارت بیمه گذار/ذینفع"},
+                "NationalCode":{"type":"string","description":"كد ملی دریافت كننده خسارت"},
+                "LegalCode":{"type":"string","description":"شناسه حقوقی دریافت كننده خسارت"},
+                "IsLegalPerson":{"type":"boolean","description":"آیا دریافت كننده خسارت شخص حقوقی است؟"},
+                "FirstName":{"type":"string","description":"نام دریافت كننده خسارت"},
+                "LastName":{"type":"string","description":"نام خانوادگی دریافت كننده خسارت"},
+                "LegalName":{"type":"string","description":"نام حقوقی دریافت كننده خسارت"},
+                "PassportNumber":{"type":"string","description":"شماره پاسپورت"},
+                "AlienIdNumber":{"type":"string","description":"كد اتباع گیرنده خسارت"},
+                "PayDate":{"type":"string","description":"تاریخ پرداخت خسارت"},
+                "IsMale":{"type":"boolean","description":"جنسیت"},
+                "IsIranian":{"type":"boolean","description":"آیا ایرانی است ؟"},
+                "BirthDate":{"type":"date","description":"تاریخ تولد دریافت كننده خسارت (حقیقی)"}
+			}
+		  }
+      }
+}

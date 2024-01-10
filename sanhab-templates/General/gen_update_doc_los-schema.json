@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/GenUpdateDocLos",
+  "definitions": {
+    "GenUpdateDocLos": {
+      "type": "object",
+      "required" : [ "MapFldDtlCod","CmpDocNo","PrntCmpdocNo","PlcyUnqCod","EdrsUnqCod","MapBrnhCod","MapAgncCod","FleDte"],
+      "additionalProperties": true,
+      "properties": {
+	  
+	        "MapFldDtlCod":{"type":"string","description":""},
+            "CmpDocNo":{"type":"string","description":""},
+            "PrntCmpdocNo":{"type":"string","description":""},
+            "PlcyUnqCod":{"type":"string","description":""},
+            "EdrsUnqCod":{"type":"string","description":""},
+            "MapBrnhCod":{"type":"string","description":""},
+            "MapAgncCod":{"type":"string","description":""},
+            "CorTypCod":{"type":["string","null"],"description":""},
+            "FleDte":{"type":"string","description":""},
+            "crDte":{"type":["string","null"],"description":""},
+            "AncDte":{"type":["string","null"],"description":""},
+           "LosEvl":{"type":["string","null"],"description":""},
+            "LosEvlNtnlId":{"type":["string","null"],"description":""}
+      },
+      "title": "Gen_Update_Doc_Los"
+    }
+  }
+}
+
+
+

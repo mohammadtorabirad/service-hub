@@ -1,0 +1,158 @@
+
+PrntPlcyCmpDocNo	varchar(50)	No	شماره بیمه نامه چاپی فعلی
+LstCmpCod	int	Yes	شرکت صادر کننده بیمه نامه (قبلی) 
+LstCmpDocNo	varchar(50)	Yes	 شماره بيمه نامه (قبلي)
+MapVehSysNam	nvarchar(255)	yes	نام سیستم خودرو  در شرکت
+MapVehSysCod	int	Yes	کد سیستم خودرو  در  شرکت
+MapTypNam	nvarchar(255)	Yes	نام تیپ خودرو در شرکت
+MapTypCod	int	Yes	کد تیپ خودرو در  شرکت
+VehSysCod	int	Yes	کد سیستم استاندارد خودرو در خصوص سیستم هایی  که درجدول کد سیستم خودرو وجود ندارد معادل این فیلد عدد صفر وارد نمایید.
+MapUsgNam	nvarchar(255)	Yes	نام کاربری در شرکت بیمه
+MapUsgCod	int	Yes	کد کاربری در شرکت
+MapCarTypNam	nvarchar(255)	Yes	نوع وسیله نقلیه در شرکت (سواری- اتوبوس ...)
+MapCarTypCod	int	Yes	کد نوع وسیله نقلیه در شرکت بیمه
+UsgCod	int	No	کد نوع کاربری استاندارد
+CarGrpCod	int	No	کد نوع گروهبندی وسیله نقلیه در قانون شخص  ثالث
+CylCnt	smallint	No	در خصوص تعداد سیلندر در وسائل نقلیه ای که تعداد سیلندر شناسایی نشده و یا وجود ندارند (مانند خودروهای راهداری –کشاورزی –برخی از موتورسیکلتها) معادل این فیلد عدد صفر وارد نمایید
+PrsnCnt	smallint	No	تعداد سرنشین مجاز(طبق ماده 3 آئین نامه برای وسیله نقلیه ای که ظرفیت مسافرگیری آنهابیش از6 نفرمی یاشد ظرفیت مجازهمان ظرفیت پایه تعریف شده دربندهای الف(هفت نفربااحتساب راننده برای ون واستیشن) ، ب(16 نفربرای مینی بوس) ، وپ(27 نفر برای اتوبوس) می باشد)
+ExtPrsnCnt	int	Yes	تعداد مازاد سرنشین
+Tng	numeric(6, 2)	Yes	تناژ
+TugCnt	smallint	Yes	 تعداديدك متصل به وسيله نقليه
+PrdDte	smallint	Yes	 سال شمسی ساخت خودرو
+VIN	varchar(17)	Yes	 شماره VIN
+MtrNum	nvarchar(100)	No	 شماره موتور
+ShsNum	nvarchar(100)	No	 شماره شاسي
+Plk	nvarchar(50)	Yes	شماره شهرباني (پلاك خودرو ملی و غیر ملی)- در خصوص موتورسیکلتها و خودروهای ترانزیت شماره کامل پلاک را در این فیلد وارد نمایید /برا ی مثال پلاک :اصفهان 12345 – یا IR2345636
+Plk1	int	Yes	دو رقم سمت چپ پلاک ملی/یا شماره (5رقمی )پلاک ملی موتور سیکلت
+Plk2	smallint	Yes	کد حرف وسط پلاک ملی
+Plk3	smallint	Yes	سه رقم سمت راست پلاک ملی 
+PlkSrl	smallint	Yes	سریال پلاک ملی/یا 3 رقم شماره سریال موتورسیکلت 
+PlkCty	nvarchar(50)	Yes	شهر پلاک غیر ملی
+PlkTypCod	int	No	کد نوع پلاک
+VehCntryCod	int	Yes	کشور سازنده خودرو
+DisLfYrNum	smallint	yes	تعداد سال  عدم خسارت جانی-بیمه نامه صادره
+DisLfAmnt	decimal(8, 0)	yes	مبلغ تخفیف عدم خسارت ثالث  جانی به ریال-بیمه نامه صادره
+DisFnYrNum	smallint	yes	 تعداد سال عدم خسارت مالی- بیمه نامه صادره
+DisFnAmnt	decimal(8, 0)	yes	مبلغ تخفیف عدم خسارت ثالث مالی-بیمه نامه صادره
+DisPrsnYrNum	smallint	yes	تعداد سال عدم خسارت راننده-بیمه نامه صادره
+DisPrsnAmnt	decimal(8, 0)	yes	مبلغ تخفیف عدم خسارت راننده-بیمه نامه صادره
+LfYrLosCnt	smallint	Yes	 تعداد خسارت‌های جانی بيمه نامه قبلي
+LfFinAmnt	decimal(8, 0)	Yes	مبلغ جرایم خسارت بابت تعداد خسارتهای جانی بیمه نامه قبلی ثبت شده در بیمه نامه صادره
+FnYrLosCnt	smallint	Yes	 تعداد خسارت‌های مالي بيمه نامه قبلي
+FnFinAmnt	decimal(8, 0)	Yes	مبلغ جرایم خسارت بابت تعداد خسارتهای مالی بیمه نامه قبلی ثبت شده در بیمه نامه صادره
+PrsnYrLosCnt	smallint	Yes	تعداد خسارت حوادث راننده بيمه نامه قبلي
+PrsnFinAmnt	decimal(8, 0)	Yes	مبلغ جریمه بابت تعدد خسارت حوادث راننده قبلی ثبت شده در بیمه نامه صادره
+CusAccFinCnt	smallint	Yes	تعداد تخلف حادثه ساز  استعلام شده در لحظه صدور
+CusAccFinAmnt	decimal(8, 0)	Yes	مبلغ اضافه نرخ اعمال شده بابت تخلفات حادثه ساز در بیمه نامه صادره
+FndCst	decimal(8, 0)	yes	جريمه ديركرد تمديد بيمه نامه- صندوق تامین خسارت های بدنی- بند ب
+LfCshPrm	decimal(8, 0)	yes	مبلغ سهم  صندوق تأمین خسارت‌های بدني – بند الف
+LfCvrCptl	decimal(11, 0)	No	 مبلغ تعهد جانی به ریال
+FnCvrCptl	decimal(11, 0)	No	  مبلغ تعهد مالی به ریال
+PrsnCvrCptl	decimal(11, 0)	No	مبلغ تعهد حوادث راننده به ریال  
+Prm	decimal(9, 0)	No	 حق بیمه - ثالث اجباری -  بدون مالیات و عوارض- پس ازاعمال تخفیفات وجرائم مربوطه
+CalcPrm	decimal(9, 0)	No	 مجموع حق بیمه قانونی ثالث و حوادث راننده اجباری ( قبل از کسر تخفیفات اختیاری شرکت -  بدون مالیات و عوارض-بدون سهم صندوق بند الف-بدون وزارت بهداشت)
+Tax	decimal(9, 0)	No	مبلغ مالیات اعمال شده دربیمه نامه جاری
+Tol	decimal(9, 0)	No	مبلغ عوارض اعمال شده دربیمه نامه جاری
+ExcLfPrm	decimal(9, 0)	No	 حق بيمه مازاد جانی (بدون مالیات و عوارض)    
+ExcFnPrm	decimal(9, 0)	No	حق بیمه مازاد مالی (بدون مالیات و عوارض)  
+PrsnPrm	decimal(9, 0)	No	 حق بيمه حوادث راننده (بدون مالیات و عوارض)
+HlthPrm	decimal(9, 0)	No	 مبلغ سهم وزارت بهداشت
+IsFndCstInst	bit	yes	جریمه  صندوق  اقساطی دریافت می شود یا خیر ؟  اقساطی دریافت می شود =1    اقساطی دریافت نمی شود=0
+IsPrmInst	bit	yes	حق بیمه  اقساطی دریافت می شود یا خیر ؟   اقساطی دریافت می شود =1    اقساطی دریافت نمی شود=0
+PlcyDurDy	int	No	مدت بیمه نامه به روز
+CalcTypCod	tinyint	No	کد نوع بیمه نامه بر اساس مدت
+IsuDte	date	No	تاریخ صدور بیمه نامه-شمسی
+BgnDte	date	No	تاریخ شروع بیمه نامه- شمسی
+EndDte	date	No	تاریخ  پایان بیمه نامه- شمسی
+LastEndDte	date	Yes	تاريخ انقضاء بيمه نامه قبلي – شمسی (در مواقعی که تاریخ پایان بیمه نامه در الحاقیه تغییر یافته باشد (یا الحاقیه فسخ باشد که تاریخ پایان بیمه نامه با تاریخ اثر الحاقیه یکسان می باشد)، در صورتی که شرکت بیمه هر کدام از این 3 تاریخ(تاریخ پایان بیمه نامه، تاریخ پایان الحاقیه، تاریخ اثر الحاقیه فسخ) را ارسال نماید، بیمه مرکزی تاریخ ارسالی را قبول می کند اما در محاسبات خود، تاریخ صحیح را قرار می دهد)
+InsTypCod	tinyint	No	نوع بیمه گذار-1 حقیقی - 2 حقوقی
+NtnlId	varchar(10)	Yes	کد ملی افراد حقيقي
+LglId	varchar(11)	Yes	شناسه ملی افراد حقوقی
+UnIrnCod	varchar(15)	Yes	کد ملی غیر ایرانیان/شناسه فراگیر اتباع خارجی
+InsFNam	nvarchar(100)	Yes	نام بیمه گذار حقیقی
+InsLNam	nvarchar(100)	Yes	نام خانوادگی بیمه گذار حقیقی
+InsLglNam	nvarchar(100)	Yes	نام بیمه گذار حقوقی
+FthNam	nvarchar(100)	Yes	نام پدر بیمه گذار
+IsMale	bit	Yes	آیا مرد است؟=1
+			- زن =0
+BrthDte	varchar(10)	Yes	تاریخ تولد بیمه گذار به شمسی
+IsIrn	bit	Yes	ایرانی بودن/ایرانی هست یا خیر؟
+CtyId	int	No	در خصوص فیلد کد استاندارد شهر، شهرهایی که در جدول کد شهر وجود ندارد معادل این فیلد عدد صفر وارد نمایید
+Adrs	nvarchar(300)	No	آدرس بیمه گذار
+ZipCod	varchar(10)	Yes	کد پستی
+Tel	varchar(50)	Yes	شماره تلفن بیمه گذار
+Mbl	varchar(50)	Yes	موبایل بیمه گذار
+Brnhfldcod	varchar(10)	Yes	کد شعبه صادر کننده (نکته: در صورتی که صادر کننده ، باجه باشد، کد شعبه ناظر درج شود)
+Agncfldcod	varchar(10)	Yes	کد نماینده صادر کننده یا معرف (نکته: در صورتی که صادر کننده یا معرف، باجه یا دفتر فرعی باشد، کد نماینده اصلی درج شود)
+Brkrfldcod	varchar(10)	Yes	کد کارگزاری رسمی در شرکت بیمه(در این حالت بایستی کد نماینده یا کد شعبه تکمیل شود.)
+InqGuid	varchar(50)	Yes	کد رهگیری استعلام خودرو از سرویس ناجا
+InsGuid	varchar(50)	Yes	کد رهگیری استعلام سوابق بیمه نامه قبلی خودرو
+DisShft 	bit	Yes	دارای تخفیف انتقالی از خودرو قبلی می باشد؟   می باشد = 1   نمی باشد=0
+ShftCmpCod	int	Yes	کد شرکت بیمه نامه انتقالی
+ShftPlcyCmpDocNo	varchar(50)	Yes	شماره بیمه نامه انتقالی
+ShftEdrsCmpDocNo	varchar(50)	Yes	شماره الحاقیه بیمه نامه انتقالی ( نوع الحاقیه حذف تخفیفات عدم خسارت می باشد)
+WbsCarPlcyUncCod	bigint	yes	کد یکتا بیمه نامه الحاقیه
+PrntEdrsCmpDocNo	varchar(50)	yes	شماره الحاقیه چاپی فعلی شرکت
+			
+EdrsNo	int	Yes	شماره ردیف الحاقیه
+EdrsDte	date	Yes	تاریخ صدورالحاقیه - شمسی
+			
+EdrsActDte	date	Yes	تاریخ اثر الحاقیه - شمسی
+			
+MapEdrsTyp	nvarchar(250)	Yes	نوع الحاقیه در شرکت
+MapEdrsTypCod	int	Yes	کد نوع الحاقیه در شرکت
+EdrsTypCod	smallint	Yes	کد نوع الحاقیه استاندارد
+EdrsCusCod	smallint	Yes	کد علت صدور الحاقیه استاندارد
+Isu	decimal(9, 0)	yes	حق صدور
+Wag	decimal(9, 0)	yes	کارمزد
+Rct	decimal(9, 0)	yes	حق وصول کارگزار
+Mapctycode	int	yes	کد شهردرشرکت
+Mapctynam	nvarchar(1000)	yes	نام شهردرشرکت
+EdrsPrm	decimal(9, 0)	yes	حق بیمه ثالث اجباری الحاقیه
+EdrsCalcPrm	decimal(9, 0)	Yes	حق بیمه قانونی ثالث اجباری الحاقیه
+EdrsExcLfPrm	decimal(9, 0)	Yes	حق بيمه اضافی یا برگشتی بدنی الحاقیه
+EdrsExcFnPrm	decimal(9, 0)	Yes	حق بيمه اضافی یا برگشتی مالی الحاقیه
+EdrsPrsnPrm	decimal(9, 0)	Yes	حق بيمه  اضافی یا برگشتی حوادث راننده الحاقیه
+EdrsTax	decimal(9, 0)	Yes	مبلغ اضافی یا برگشتی مالیات محاسبه شده
+EdrsTol	decimal(9, 0)	Yes	مبلغ اضافی یا برگشتی عوارض  محاسبه شده
+EdrsFndCst	decimal(9, 0)	Yes	مبلغ اضافی یا برگشتی جریمه تاخیر تمدید بیمه نامه -صندوق تامین خسارت های بدنی
+EdrsLfCshPrm	decimal(9, 0)	Yes	مبلغ اضافی یا برگشتی  سهم صندوق تأمین خسارت‌های بدني
+ExcPrsnPrm	decimal(9, 0)	Yes	 حق بيمه مازاد حوادث راننده (بدون مالیات و عوارض)
+DisLfYrPrcnt	Int	No	درصد تخفیف یا افزایش نهایی اعمال شده در بیمه نامه جاری بابت عدم یا وجود خسارت بدنی(افزایش با اعداد منفی نمایش داده می شود )
+DisFnYrPrcnt	Int	No	درصد تخفیف یا افزایش نهایی اعمال شده در بیمه نامه جاری بابت عدم یا وجود خسارت مالی (افزایش با اعداد منفی نمایش داده می شود )
+DisPrsnYrPrcnt	Int	No	درصد تخفیف یا افزایش نهایی اعمال شده در بیمه نامه جاری بابت عدم یا وجود خسارت حوادث راننده (افزایش با اعداد منفی نمایش داده می شود )
+BgnTime	time	Yes	ساعت شروع بیمه نامه
+LstDisYrPrcnt	samllint	Yes	درصد تخفیف عدم خسارت ثالث اعمال شده در بیمه نامه (بدنی ، جانی) سال قبل
+LstDisPrsnYrPrcnt	samllint	Yes	درصد تخفیف عدم خسارت حوادث راننده اعمال شده در بیمه نامه سال قبل
+FuelTypCod	Smallint 	No	نوع سوخت
+PrmPayTypCod	Smallint	Yes	نوع پرداخت حق بیمه
+FuncStsCod	Smallint	Yes	کد دلیل عدم وجود بیمه نامه قبلی خودرو
+ShftPlkTypCod	Int 	Yes	نوع پلاک خودرو انتقال دهنده تخفیف
+ShftPlk	nvarchar(50)	Yes	پلاک خودرو انتقال دهنده تخفیف
+ShftPlk1	Int	Yes	دو رقم سمت چپ پلاک انتقال دهنده تخفیف
+ShftPlk2	Smallint	Yes	حرف پلاک انتقال دهنده تخفیف
+ShftPlk3	Smallint	Yes	سه رقم سمت راست پلاک انتقال دهنده تخفیف
+ShftPlkSrl	Smallint	Yes	شماره سریال پلاک انتقال دهنده تخفیف
+IsShftIrn	Bit	Yes	ملیت انتقال دهنده تخفیف(0: غیرایرانی، 1: ایرانی)
+ShftInsTypCod	Tinyint	Yes	نوع شخصیت انتقال دهنده تخفیف
+ShftNtnlId	varchar(10)	Yes	کدملی انتقال دهنده تخفیف
+ShftLglId	varchar(11)	Yes	شناسه حقوقی انتقال دهنده تخفیف
+ShftUnIrnCod	VARCHAR(15)	Yes	کد اتباع خارجی انتقال دهنده تخفیف
+ShftRltnCod	Int	Yes	نسبت انتقال گیرنده با انتقال دهنده تخفیف
+IsPlkOwnIrn	Bit	No	ملیت مالک پلاک (0: غیرایرانی، 1: ایرانی)
+PlkOwnInsTypCod	Tinyint	No	نوع شخصیت مالک پلاک
+PlkOwnNtnlId	varchar(10)	Yes 	کدملی صاحب پلاک
+PlkOwnLglId	varchar(11)	Yes 	شناسه حقوقی صاحب پلاک
+PlkOwnUnIrnCod	VARCHAR(15)	Yes 	کد اتباع خارجی صاحب پلاک
+PlkCod	int	Yes	کد پلاک استعلام شده مالک، خروجی وب متد استعلام سوابق تخفیفات
+ShftPlkCod	int	Yes	کد پلاک استعلام شده  انتقال دهنده، خروجی وب متد استعلام سوابق تخفیفات
+ThrDrv	List<ThrDrv>	Yes	لیستی از اطلاعات راننده(جدول اطلاعات راننده)
+ShftCarGrpCod	Int	Yes	کد گروهبندی خودرو انتقال دهنده تخفیف
+IntrLglNam	NVARCHAR(200)	Yes	نام معرف حقوقی جهت تقسیط حق بیمه
+			
+IntrLglId	CHAR(11)	Yes	شناسه معرف حقوقی جهت تقسیط حق بیمه
+ThrInst	List<ThrInst>	Yes	لیست اطلاعات اقساط(جدول اطلاعات اقساط)
+LicRte	Decimal	Yes	درصد کاهش/افزایش حق بیمه براساس سوابق رانندگی
+LstThrPlcyCod	Bigint	Yes 	کد یکتا بیمه نامه قبل
+ShftEndDte	varchar(10)	Yes	تاریخ پایان بیمه نامه انتقالی
+ShftThrPlcyCod	Bigint	Yes	کد یکتا بیمه نامه انتقالی

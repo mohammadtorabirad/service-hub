@@ -1,0 +1,433 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/cardamageDoc",
+  "definitions": {
+    "cardamageDoc": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "PrntDocLosCmp",
+        "PrntPlcyCmpDocNo",
+        "PlcyWbsCarPlcyUnqCod",
+        "ThrDmgTypCod",
+        "PlkTypCod",
+        "Plk",
+        "CusHasLic",
+        "CusAccLicTypCod"
+      ],
+      "properties": {
+        "PrntDocLosCmp": {
+          "type": "string",
+          "description": "شماره پرونده خسارت چاپی فعلی"
+        },
+        "PrntPlcyCmpDocNo": {
+          "type": "string",
+          "description": "شماره بیمه نامه چاپی"
+        },
+        "PlcyWbsCarPlcyUnqCod": {
+          "type": "number",
+          "description": "خروجی متدثبت بیمه نامه(شماره یکتایی که پس از  ثبت بیمه نامه بازگشت داده شده است)"
+        },
+        "EdrsWbsCarPlcyUnqCod": {
+          "type": ["number","null"] , 
+          "description": "خروجی متدثبت الحاقیه(شماره یکتایی که پس از ثبت الحاقیه بازگشت داده شده است)"
+        },
+        "CtyId": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "کد شهر وقوع حادثه در خصوص فیلد کد استاندارد شهر، شهرهایی که در جدول کد شهر وجود ندارد معادل این فیلد عدد صفر وارد نمایید"
+        },
+        "OcrAdr": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "آدرس دقيق محل وقوع حادثه، طبق مندرجات پرونده خسارت شخص ثالث"
+        },
+        "InCty": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": " محل وقوع حادثه خارج ازحريم شهر ميباشد"
+        },
+        "AcdTypCod": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "کد نوع حادثه استاندارد",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "AcdRsnCod": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": " کد علت وقوع حادثه"
+        },
+        "MapAcdRsnCod": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "کد علت حادثه درشرکت"
+        },
+        "MapAcdRsn": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شرح حادثه درشرکت"
+        },
+        "CrkGuid": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "کد استعلام کروکی از ناجا(اطلاعات ومستندات ناجاارسال گردیده است)"
+        },
+        "CrkSeri": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شماره سری کروکی"
+        },
+        "CrkSrl": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "سریال کروکی"
+        },
+        "CusAccNam": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": " نام مقصرحادثه - دررشته شخص ثالث(طبق مندرجات پرونده خسارت)"
+        },
+        "CusAccLNam": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": " نام خانوادگی مقصرحادثه - دررشته شخص ثالث(طبق مندرجات پرونده خسارت)"
+        },
+        "CusAccFthNam": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": " نام پدرمقصرحادثه - دررشته شخص ثالث(طبق مندرجات پرونده خسارت)"
+        },
+        "CusAccIdNum": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شماره شناسنامه مقصرحادثه - دررشته شخص ثالث(طبق مندرجات پرونده خسارت)"
+        },
+        "CusAccNtnId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شماره ملی مقصرحادثه - دررشته شخص ثالث(طبق مندرجات پرونده خسارت)"
+        },
+        "CusBrthDte": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "سال تولد(فقط سال، بدون ذکرماه وروز) مقصرحادثه - دررشته شخص ثالث(طبق مندرجات پرونده خسارت)"
+        },
+        "CusCertGuid": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "کد استعلام گواهینامه راننده خودرو مقصر از ناجا(اطلاعات ومستندات ناجاارسال گردیده است)"
+        },
+        "CusCertDte": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "تاریخ شمسی اخذ گواهینامه مقصر حادثه"
+        },
+        "CusCertNum": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شماره گواهی نامه مقصر"
+        },
+        "CusIsMrd": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "آیا راننده مقصر حادثه متاهل است؟ متاهل=1 مجرد =0"
+        },
+        "CusJobAdrs": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "آدرس محل کار مقصر حادثه"
+        },
+        "CusJobNam": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شغل بیمه گذار مقصر حادثه"
+        },
+        "CusMaleCod": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "جنسیت راننده مقصر حادثه"
+        },
+        "IsLcnsFit": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": " گواهينامه مقصر حادثه براي رانندگي باوسيله نقليه مسبب حادثه متناسب مي باشد"
+        },
+        "OcrDte": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": " تاريخ و ساعت وقوع حادثه به تاریخ شمسی واردشود"
+        },
+        "CmpltDte": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": " تاريخ شمسی تكميل پرونده"
+        },
+        "AncDte": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": " تاريخ شمسی اعلام حادثه"
+        },
+        "FleDte": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": " تاريخ شمسی تشكيل پرونده"
+        },
+        "LstNjRptDte": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "تاریخ شمسی دریافت اصل یا تصویر گزارش کارشناس راهنمایی و رانندگی یا گزارش مقامات انتظامی یا نظریه کارشناس یا هیات کارشناسی منتخب مراجع قضایی"
+        },
+        "PlcyDte": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "تاریخ شمسی دریافت بیمه نامه شخص ثالث یا هرگونه مدرک دیگری که حاکی از بیمه وسیله نقلیه مسبب حادثه در زمان وقوع حادثه"
+        },
+        "DrvLcnsDte": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "تاریخ شمسی دریافت تصویر گواهی نامه رانندگی مسئول حادثه"
+        },
+        "CarDocDte": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "تاریخ شمسی دریافت تصویر مدرک شناسایی وسیله نقلیه مسبب حادثه در صورت وجود"
+        },
+        "LglDocDte": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "تاریخ شمسی دریافت مدارک مثبته دایر بر احراز سمت قانونی متقاضی از قبیل قیومیت یا وکالت  یا وصایت یا ولایت خاص حسب مورد"
+        },
+        "LstRprtDte": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": " تاريخ شمسی دريافت آخرين مدارک لازم جهت تکمیل پرونده(گزارش موردنيازازمراجع ذيربط(گزارش كارشناس راهنمايي ورانندگي وياپليس راه ودرصورت لزوم گزارش سايرمقامات انتظامي وپزشكي قانوني))"
+        },
+        "VehCntryCod": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "کشور ساخت خودرو مقصر حادثه"
+        },
+        "LosEvl": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "نام ارزیاب خسارت )حقیقی یا حقوقی)"
+        },
+        "LosEvlNtnlId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "کد ملی ارزیاب خسارت حقیقی"
+        },
+        "LosEvlLglId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شناسه ملی ارزیاب خسارت حقوقی(درصورتی که ارزیاب شخص حقوقی یعنی یک شرکت ارزیابی باشد، شناسه ملی شرکت منظور می باشد)"
+        },
+        "BrnhFldCod": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "کد شعبه رسمی شرکت بیمه - در حالت صدور یا معرفی-در حالت باجه شعبه ناظر ثبت شود(دریافتی از سرویس شعب بیمه مرکزی)"
+        },
+        "AgncFldCod": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "کد نماینده رسمی فعال شرکت بیمه-در حالت صدور یا معرفی- د رحالت باجه نماینده مربوطه ثبت شود(دریافتی از سرویس نمایندگان بیمه مرکزی)"
+        },
+        "Mapctycod": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "کد شهردرشرکت"
+        },
+        "Mapctynam": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "نام شهردرشرکت"
+        },
+        "CusAccInsTypCod": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "نوع مقصر حادثه",
+          "minimum": 1,
+          "maximum": 7
+        },
+        "CusAccLglId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شناسه ملی اشخاص حقوقی مقصر حادثه"
+        },
+        "CusAccLglNam": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "نام شخص حقوقی مقصر حادثه"
+        },
+        "CusAccIsIrn": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "تابعیت 0-غیر ایرانی 1- ایرانی"
+        },
+        "CusAccUnIrnCod": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شناسه تابعیت غیر ایرانی یا شماره پاسپورت"
+        },
+        "ThrDmgTypCod": {
+          "type": "number",
+          "description": "نوع صدمه"
+        },
+        "PlkTypCod": {
+          "type": "number",
+          "description": "نوع پلاک مقصر"
+        },
+        "Plk": {
+          "type": "string",
+          "description": "شماره شهرباني (پلاك خودرو ملی و غیر ملی)- در خصوص موتورسیکلتها و خودروهای ترانزیت شماره کامل پلاک را در این فیلد وارد نمایید /برا ی مثال پلاک :اصفهان 12345 – یا IR2345636"
+        },
+        "Plk1": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "دو رقم سمت چپ پلاک ملی/یا شماره (5رقمی )پلاک ملی موتور سیکلت"
+        },
+        "Plk2": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "کد حرف وسط پلاک ملی"
+        },
+        "Plk3": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "سه رقم سمت راست پلاک ملی"
+        },
+        "PlkSrl": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "سریال پلاک ملی/یا 3 رقم شماره سریال موتورسیکلت"
+        },
+        "PlkCty": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شهر پلاک مقصر"
+        },
+        "CusHasLic": {
+          "type": "number",
+          "description": "آیا مقصر گواهینامه دارد؟ 1=بله، 0=خیر"
+        },
+        "PlkCod": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "کد استعلام پلاک ملی از ناجا، خروجی وب متد استعلام سوابق تخفیفات"
+        },
+        "CusAccLicTypCod": {
+          "type": "string",
+          "description": "نوع گواهینامه مقصر حادثه"
+        }
+      }
+    }
+  }
+}

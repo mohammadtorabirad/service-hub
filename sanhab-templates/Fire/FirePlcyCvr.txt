@@ -1,0 +1,14 @@
+<fir:FirPlcyCvr>
+    <fir:Cptl>${Cptl}</fir:Cptl>
+   <fir:CptlCurCod>${CptlCurCod}</fir:CptlCurCod>
+   <fir:CptlLmt>${CptlLmt}</fir:CptlLmt>
+   <fir:CptlLmtCurCod>${CptlLmtCurCod}</fir:CptlLmtCurCod>
+   <fir:CurCod>${CurCod}</fir:CurCod>
+   <fir:CvrCod>${CvrCod}</fir:CvrCod>
+   <fir:CvrTypCod>${CvrTypCod}</fir:CvrTypCod>
+   <fir:FrnValDscCod>${FrnValDscCod}</fir:FrnValDscCod>
+   <fir:FrnshzPrcnt>${FrnshzPrcnt}</fir:FrnshzPrcnt>
+   <fir:InsrdCmpDocNo>${InsrdCmpDocNo}</fir:InsrdCmpDocNo>
+   <fir:MinFrnshz>${MinFrnshz}</fir:MinFrnshz>
+   <fir:Prm>${Prm}</fir:Prm>
+</fir:FirPlcyCvr>

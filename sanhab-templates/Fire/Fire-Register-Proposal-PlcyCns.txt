@@ -1,0 +1,6 @@
+ <fir:FirPlcyCns>
+    <!--Optional:-->
+    <fir:CnsCmpCod>${CnsCmpCod}</fir:CnsCmpCod>
+    <!--Optional:-->
+    <fir:CnsShre>${CnsShre}</fir:CnsShre>
+</fir:FirPlcyCns>

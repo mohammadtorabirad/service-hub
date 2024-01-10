@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/GenLofeLos",
+  "definitions": {
+    "GenLofeLos": {
+      "type": "object",
+      "required": [
+        "CmpDocNo",
+        "MapFldDtlCod",
+        "PayDte",
+        "LfAmnt",
+        "HdsAmnt",
+        "MftAmnt",
+        "RtrAmnt",
+        "IlsAmnt",
+        "BrdTypCod",
+        "LosUnqCod",
+        "DocLosUnqCod",
+        "RsvAmnt",
+        "PlcyLifeWbsBsCod",
+        "PrdCod",
+        "MsAmnt",
+        "TamamOmrAmnt",
+        "MdcHdsAmnt",
+        "BdHdsAmnt"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "CmpDocNo": {
+          "type": "string",
+          "description": "شماره یکتای حواله خسارت عمر"
+        },
+        "MapFldDtlCod": {
+          "type": "string",
+          "description": "کد رشته در شرکت"
+        },
+        "MapMdcFldDtlCod": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "کد رشته پوشش امراض خاص در شرکت"
+        },
+        "MapOthFldDtlCod": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "کد رشته سابر پوشش ها در شرکت"
+        },
+        "PayDte": {
+          "type": "string",
+          "description": "تاریخ خسارت پرداخت شده"
+        },
+        "LfAmnt": {
+          "type": "number",
+          "description": "مبلغ خسارت پرداخت شده یا برگشتی بابت فوت"
+        },
+        "HdsAmnt": {
+          "type": "number",
+          "description": " مبلغ خسارت بر اثر حادثه(فوت یا امراض"
+        },
+        "MftAmnt": {
+          "type": "number",
+          "description": "در صورت معافیت(پرداخت سرمایه ناشی از کارافتادگی)"
+        },
+        "RtrAmnt": {
+          "type": "number",
+          "description": "بازخرید"
+        },
+        "IlsAmnt": {
+          "type": "number",
+          "description": "امراض(پرداخت سرمایه در صورت ابتلا به امراض خاص)"
+        },
+        "BrdTypCod": {
+          "type": "number",
+          "description": "نوع پرداخت خسارت  در رشته های عمر"
+        },
+        "LosUnqCod": {
+          "type": "number",
+          "description": "کد یکتا  خسارت"
+        },
+        "DocLosUnqCod": {
+          "type": "number",
+          "description": "کد یکتا پرونده خسارت"
+        },
+        "RsvAmnt": {
+          "type": "number",
+          "description": "مبلغ اندوخته خسارت(برداشت از اندوخته)"
+        },
+        "PlcyLifeWbsBsCod": {
+          "type": "number",
+          "description": "کد یکتای پایه عمر"
+        },
+        "PrdCod": {
+          "type": "number",
+          "description": "کد محصول"
+        },
+        "MsMapFldDtlCod": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "کد رشته مسئولیت تلفیقی"
+        },
+        "TamamMapFldDtlCod": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "کدرشته تمام عمر تلفیقی"
+        },
+        "MsAmnt": {
+          "type": "number",
+          "description": "خسارت مسئولیت تلفیقی"
+        },
+        "TamamOmrAmnt": {
+          "type": "number",
+          "description": "خسارت تمام عمر تلفیقی"
+        },
+        "MdcHdsAmnt": {
+          "type": "number",
+          "description": "خسارت هزینه پزشکی بر اثر حادثه"
+        },
+        "BdHdsAmnt": {
+          "type": "number",
+          "description": "خسارت نقص عضو"
+        }
+      },
+      "title": "Gen_Lofe_Los"
+    }
+  }
+}
+
+
+

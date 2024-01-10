@@ -1,0 +1,32 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:fir="http://schemas.datacontract.org/2004/07/FirLogic.DataModel">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:CiiRegDocLos>
+         <!--Optional:-->
+         <tem:req>
+            <!--Optional:-->
+            <fir:AgncFldCod>${AgncFldCod}</fir:AgncFldCod>
+            <!--Optional:-->
+            <fir:AncDte>?</fir:AncDte>
+            <!--Optional:-->
+            <fir:BrnhFldCod>?</fir:BrnhFldCod>
+            <!--Optional:-->
+            <fir:CmpDocNo>?</fir:CmpDocNo>
+            <!--Optional:-->
+            <fir:FirPlcyCod>?</fir:FirPlcyCod>
+            <!--Optional:-->
+            <fir:FleDte>?</fir:FleDte>
+            <!--Optional:-->
+            <fir:OcrDte>?</fir:OcrDte>
+            <!--Optional:-->
+            <fir:WbsDocLosCod>?</fir:WbsDocLosCod>
+            <!--Optional:-->
+            <fir:WrhInqCod>?</fir:WrhInqCod>
+         </tem:req>
+         <!--Optional:-->
+         <tem:Username>?</tem:Username>
+         <!--Optional:-->
+         <tem:Password>?</tem:Password>
+      </tem:CiiRegDocLos>
+   </soapenv:Body>
+</soapenv:Envelope>

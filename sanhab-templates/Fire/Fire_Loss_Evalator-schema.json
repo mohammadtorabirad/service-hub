@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/FireLossEvaluator",
+  "definitions": {
+    "FireLossEvaluator": {
+      "type": "object",
+      "required": [
+        "FirDocLosCod",
+        "Exp",
+        "CurCod",
+        "IsFrgn",
+        "PayDte",
+        "HvNo",
+        "HvTypCod",
+        "IsCncl",
+        "CmpDocNo"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "FirDocLosCod": {
+          "type": "number",
+          "description": "کد یکتا پرونده خسارت"
+        },
+        "Exp": {
+          "type": "number",
+          "description": "هزینه کارشناسی"
+        },
+        "CurCod": {
+          "type": "number",
+          "description": "کد ارز"
+        },
+        "EvlNtnlId": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "کد ملی ارزیاب حقیقی"
+        },
+        "EvlFNam": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "نام ارزیاب حقیقی"
+        },
+        "EvlLNam": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "نام خانوادگی ارزیاب حقیقی"
+        },
+        "EvlBrthDte": {
+          "type": [
+            "DateTime",
+            "null"
+          ],
+          "description": "تاریخ تولد اریاب حقیقی"
+        },
+        "EvlLglNam": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "نام ارزیاب حقوقی"
+        },
+        "EvlLglId": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "شناسه ملی ارزیاب حقوقی"
+        },
+        "PsprtNo": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شماره پاسپورت"
+        },
+        "IsFrgn": {
+          "type": "Boolean",
+          "description": "خارجی است؟"
+        },
+        "PayDte": {
+          "type": "DateTime",
+          "description": "تاریخ صدور حواله خسارت"
+        },
+        "HvNo": {
+          "type": "number",
+          "description": "شماره حواله خسارت"
+        },
+        "HvTypCod": {
+          "type": "number",
+          "description": "کد نوع حواله"
+        },
+        "IsCncl": {
+          "type": "Boolean",
+          "description": "ابطالی است؟"
+        },
+        "CurrencySource": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "منشا ارز"
+        },
+        "RcvShebaNo": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "شماره شبای گیرنده حواله خسارت"
+        },
+        "CmpDocNo": {
+          "type": "string",
+          "description": "کد یونیک حواله ارزیابی در شرکت"
+        }
+      },
+      "title": "FireLossEvaluator"
+    }
+  }
+}
+
+
+

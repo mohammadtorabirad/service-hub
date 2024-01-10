@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required" : [ "PlcyCns" , "PlcyPay" , "PlcyGoodsGroups" ,"MapFldDtlCod","PrntPrpsCmpDocNo",
+    "PlcyTypCod","BgnDte","EndDte","IsuDte","IsMrg","IsSts","IsGrp","IsFrstLos",
+    "IsPayAtOnce","PrdInsDay","IsRsl","Prm","CurCod","CptlLmt","CptlLmtCurCod","Cptl","CptlCurCod"],
+  "additionalProperties": true,
+  "properties": {
+
+         "PlcyCns":{"type" : "array" , "items" : {"$ref" : "#/$defs/FirPlcyCns"}},
+         "PlcyCvr":{"type" : "array" , "items" : {"$ref" : "#/$defs/FirPlcyCvr"}},
+         "PlcyInsrd":{"type" : "array" , "items" : {"$ref" : "#/$defs/FirPlcyInsrd"}},
+         "PlcyIns":{"type" : "array" , "items" : {"$ref" : "#/$defs/FirPlcyIns"}},
+         "PlcyPay":{"type" : "array" , "items" : {"$ref" : "#/$defs/FirPlcyPay"}},
+         "PlcyGoodsGroups":{"type" : "array" , "items" : {"$ref" : "#/$defs/FirPlcyGoodsGroupsLevelOne"}},
+
+         "CmpCntrctCod":{"type":["number","null"],"description":"کد یکتا قرارداد"},
+         "EdrsFirPlcyCod":{"type":["number","null"],"description":"کد یکتا بیمه نامه الحاقیه"},
+         "MapFldDtlCod":{"type":"string","description":"کد رشته در شرکت"},
+         "PrntPlcyCmpDocNo":{"type":["string","null"],"description":"شماره چاپی بیمه نامه یکتا در شرکت بیمه"},
+         "PrntPrpsCmpDocNo":{"type":"string","description":"شماره یکتای پیشنهاد بیمه نامه/الحاقیه در شرکت بیمه"},
+         "PrntEdrsCmpDocNo":{"type":["string","null"],"description":"شماره چاپی الحاقیه در شرکت بیمه"},
+         "PlcyTypCod":{"type":"number","description":"کد نوع بیمه نامه"},
+         "BgnDte":{"type":"string","description":"تاریخ شروع"},
+         "EndDte":{"type":"string","description":"تاریخ پایان"},
+         "IsuDte":{"type":"string","description":"تاریخ صدور"},
+         "EdrsTypCod":{"type":["number","null"],"description":"نوع الحاقیه"},
+         "EdrsDscr":{"type":["string","null"],"description":"توضیحات الحاقیه"},
+         "EdrsCusCod":{"type":["number","null"],"description":"علت الحاقیه"},
+         "BrkrFldCod":{"type":["number","null"],"description":"کد کارگزار(همیشه معرف است)"},
+         "AgncFldCod":{"type":["number","null"],"description":"کد نماینده"},
+         "BrnhFldCod":{"type":["number","null"],"description":"کد شعبه"},
+         "IntrBrnhFldCod":{"type":["number","null"],"description":"کدمعرف شعبه"},
+         "IntrAgncFldCod":{"type":["number","null"],"description":"کد معرف (یک نماینده است)"},
+         "RqsTtl":{"type":["string","null"],"description":"عنوان طرح دارای شماره مجوز صدور از بیمه مرکزی"},
+         "RqsCod":{"type":["number","null"],"description":"شماره مجوز استعلام نرخ"},
+         "RqsIsuDte":{"type":["string","null"],"description":"تاریخ صدور مجوز (تاریخ استعلام نرخ)"},
+         "RqsVldDte":{"type":["string","null"],"description":"تاریخ اتمام مجوز (تاریخ اعتبار نرخ)"},
+         "IsMrg":{"type":"boolean","description":"مرهونات"},
+         "IsSts":{"type":"boolean","description":"1=اظهار نامه ای"},
+         "IsGrp":{"type":"boolean","description":"1=گروهی"},
+         "IsFrstLos":{"type":"boolean","description":"1= فرست لاس"},
+         "IsPayAtOnce":{"type":"boolean","description":"بصورت نقدي است(يكجا)"},
+         "PrdInsDay":{"type":"number","description":"مدت بیمه (به روز)"},
+         "PLcyExc":{"type":["string","null"],"description":"استثنائات بیمه نامه"},
+         "RslCnt":{"type":["number","null"],"description":"تعداد ریسک تفکیکی"},
+         "IsRsl":{"type":"boolean","description":"قابلیت تفکیک-Resolution"},
+         "CptlRsk":{"type":["number","null"],"description":"سرمایه بزرگترین ریسک (حداکثر تعهد)"},
+         "Tax":{"type":["number","null"],"description":"مالیات ارزش افزوده"},
+         "Tol":{"type":["number","null"],"description":"عوارض ارزش افزوده"},
+         "PrtAprvNo":{"type":["number","null"],"description":"شماره تائیدیه از سازمان بنادر و دریانوردی"},
+         "PrtAprvDte":{"type":["string","null"],"description":"تاريخ صدور تائیدیه از سازمان بنادر و دریانوردی"},
+         "FixRte":{"type":["number","null"],"description":"نرخ تسعیر ارز ثابت"},
+         "LdrCmpCod":{"type":["number","null"],"description":"کد شرکت لیدر (در بیمه نامه های کنسرسیومی اجباری است)"},
+         "LdrCmpDocNo":{"type":["string","null"],"description":"شماره بیمه نامه لیدر(در بیمه نامه های کنسرسیومی برای اعضا به غیر از لیدر اجباری است)"},
+         "Prm":{"type":"number","description":"حق بیمه بیمه نامه/الحاقیه"},
+         "CurCod":{"type":"number","description":"کد ارز حق بیمه بیمه نامه/الحاقیه"},
+         "CptlLmt":{"type":"number","description":"حداکثر تعهد بیمه نامه/الحاقیه"},
+         "CptlLmtCurCod":{"type":"number","description":"کد ارز حداکثر تعهد بیمه نامه/الحاقیه"},
+         "Cptl":{"type":"number","description":"سرمایه بیمه نامه/الحاقیه"},
+         "CptlCurCod":{"type":"number","description":"کد ارز سرمایه بیمه نامه/الحاقیه"},
+         "CurrencySource":{"type":["number","null"],"description":"منشا ارز"},
+         "WbsEdrsCod":{"type":["number","null"],"description":"کد یکتای همین الحاقیه (دریافتی با سرویس مشترکات) "},
+         "WbsPlcyCod":{"type":["number","null"],"description":"کد یکتای همین بیمه نامه (دریافتی با سرویس مشترکات)"},
+         "EdrsEffectDate":{"type":["string","null"],"description":"تاریخ اثر الحاقیه"},
+         "InsurancePremiumRate":{"type":["number","null"],"description":"نرخ حق‌بیمه"}
+
+      } ,
+		
+      "$defs" : {
+		"FirPlcyCns" : {
+		  "type": "object",
+		  "required" : [ "CnsCmpCod","CnsShre"],
+		  "additionalProperties": true,
+		  "properties": {
+		  	"CnsCmpCod": {"type" : "number"  , "description" : "کد شرکت عضو کنسرسیوم"},
+		  	"CnsShre" : {"type" : "number" , "description"  : "درصد سهم شرکت بیمه از مشترک(کنسرسیوم)"}
+          }
+		} ,
+
+		"FirPlcyCvr" : {
+          "type": "object",
+          "required" : [ "CvrCod","Prm","CurCod","CptlLmt","CptlLmtCurCod","Cptl","CptlCurCod","CvrTypCod"],
+          "additionalProperties": true,
+          "properties": {
+              "InsrdCmpDocNo":{"type":["string","null"],"description":"شماره یکتای مورد بیمه در شرکت"},
+              "MinFrnshz":{"type":["number","null"],"description":"مبلغ حداقل فرانشیز"},
+              "CvrCod":{"type":"number","description":"کد نوع پوشش"},
+              "Prm":{"type":"number","description":"حق بیمه صادره بدون مالیات و عوارض"},
+              "CurCod":{"type":"number","description":"کد ارز حق بیمه"},
+              "FrnshzPrcnt":{"type":["number","null"],"description":"درصد فرانشیز"},
+              "FrnValDscCod":{"type":["number","null"],"description":"انواع فراشیز"},
+              "CptlLmt":{"type":"number","description":"حداکثر تعهد پوشش"},
+              "CptlLmtCurCod":{"type":"number","description":"کد ارز حداکثر تعهد پوشش"},
+              "Cptl":{"type":"number","description":"سرمایه"},
+              "CptlCurCod":{"type":"number","description":"کد ارز سرمایه"},
+              "CvrTypCod":{"type":"number","description":"کد نوع سرمایه پوشش"}
+          }
+        } ,
+
+		"FirPlcyInsrd" : {
+		  "type": "object",
+          "required" : [ "InsrdCmpDocNo","ActTypCod","CmpInsrdTypCod","CmpInsrdTypDscrp","BldTypCod",
+            "CptlTypCod","InsrdCntryCod","WrhInqCod","Prm","CurCod","CptlLmt","CptlLmtCurCod","Cptl",
+            "CptlCurCod"],
+          "additionalProperties": true,
+		  "properties": {
+              "InsrdCmpDocNo":{"type":"string","description":"کد یکتای مورد بیمه در شرکت"},
+              "ActTypCod":{"type":"number","description":"نوع مورد بیمه"},
+              "InsrdTypCod":{"type":["number","null"],"description":"کد استاندارد موضوع فعالیت مورد بیمه(شرح موضوع بیمه)"},
+              "CmpInsrdTypCod":{"type":"number","description":"کد موضوع فعالیت مورد بیمه(شرح موضوع بیمه) در شرکت بیمه"},
+              "CmpInsrdTypDscrp":{"type":"string","description":"شرح موضوع فعالیت مورد بیمه(شرح موضوع بیمه) در شرکت بیمه"},
+              "StnSpc":{"type":["number","null"],"description":"فاصله ایستگاه آتش نشانی تا محل مورد بیمه"},
+              "StnTm":{"type":["number","null"],"description":"فاصله زمانی ایستگاه آتش نشانی تا محل مورد بیمه"},
+              "BldTypCod":{"type":"number","description":"کد نوع سازه مورد بیمه"},
+              "CptlTypCod":{"type":"number","description":"کد نوع سرمایه مورد بیمه"},
+              "InsrdNtnlId":{"type":["number","null"],"description":"شناسه ملی حقوقی مورد بیمه"},
+              "InsrdZipCod":{"type":["number","null"],"description":"کد پستی مورد بیمه"},
+              "InsrdCntryCod":{"type":"number","description":"کشور مورد بیمه"},
+              "InsrdCtyCod":{"type":["number","null"],"description":"شهر مورد بیمه"},
+              "MPL":{"type":["number","null"],"description":"درصد MPL"},
+              "EML":{"type":["number","null"],"description":"درصد EML"},
+              "PrdYr":{"type":["number","null"],"description":"سال ساخت مورد بیمه"},
+              "InsrdAdrs":{"type":["string","null"],"description":"آدرس محل مورد بیمه"},
+              "Dscr":{"type":["string","null"],"description":"شرح مورد بیمه"},
+              "WrhInqCod":{"type":"number","description":"کد پیگیری استعلام از سامانه جامع انبارها"},
+              "Prm":{"type":"number","description":"حق بیمه بیمه نامه/الحاقیه"},
+              "CurCod":{"type":"number","description":"کد ارز حق بیمه بیمه نامه/الحاقیه"},
+              "CptlLmt":{"type":"number","description":"حداکثر تعهد بیمه نامه/الحاقیه"},
+              "CptlLmtCurCod":{"type":"number","description":"کد ارز حداکثر تعهد بیمه نامه/الحاقیه"},
+              "Cptl":{"type":"number","description":"سرمایه بیمه نامه/الحاقیه"},
+              "CptlCurCod":{"type":"number","description":"کد ارز سرمایه بیمه نامه/الحاقیه"}
+          }
+		} ,
+
+        "FirPlcyIns" : {
+          "type": "object",
+          "required" : [ "InsTypCod","PrsnTypCod","IsFrgn"],
+          "properties": {
+               "InsTypCod":{"type":"number","description":"کد نوع بیمه گذار"},
+               "PrsnTypCod":{"type":"number","description":"کد نوع شخصیت"},
+               "LglNam":{"type":["string","null"],"description":"نام حقوقی"},
+               "LglId":{"type":["number","null"],"description":"شناسه ملی حقوقی"},
+               "Nam":{"type":["string","null"],"description":"نام حقیقی"},
+               "LNam":{"type":["string","null"],"description":"نام خانوادگی حقیقی"},
+               "CtyId":{"type":["number","null"],"description":"کد شهر آدرس"},
+               "Adrs":{"type":["string","null"],"description":"آدرس"},
+               "Tel":{"type":["string","null"],"description":"تلفن"},
+               "Mbl":{"type":["string","null"],"description":"موبایل"},
+               "ZipCod":{"type":["number","null"],"description":"کد"},
+               "NtnlId":{"type":["number","null"],"description":"کد ملی حقیقی"},
+               "BrthDate":{"type":["string","null"],"description":"تاریخ تولد حقیقی"},
+               "PsprtNo":{"type":["string","null"],"description":"شماره پاسپورت"},
+               "IsFrgn":{"type":"boolean","description":"خارجی است؟"}
+          }
+        },
+        "FirPlcyPay" : {
+          "type": "object",
+          "required" : [ "Val","ToPayDte","PayNo","AncDte"],
+          "properties": {
+               "Val":{"type":"number","description":"مبلغ قسط"},
+               "ToPayDte":{"type":"string","description":"تاریخ سررسید"},
+               "PayNo":{"type":"number","description":"شماره قسط"},
+               "AncDte":{"type":"string","description":"تاریخ اعلام اطلاعات اقساط و وصول آنها"},
+               "RctDte":{"type":["string","null"],"description":"تاریخ وصول"}
+          }
+        },
+        "FirPlcyGoodsGroupsLevelOne" : {
+          "type": "object",
+          "properties": {
+               "GoodsId":{"type":["number", "null"],"description":"شناسه کالا"}
+          }
+        }
+
+      }
+
+}

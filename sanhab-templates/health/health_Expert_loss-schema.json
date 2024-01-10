@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/HealthExpertLoss",
+  "definitions": {
+    "HealthExpertLoss": {
+      "type": "object",
+      "required": [
+        "LossDocumentUniqueCode",
+        "LossNumber",
+        "LossTypeId",
+        "Amount",
+        "PaymentDate"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "LossDocumentUniqueCode": {
+          "type": "number",
+          "description": "کد یکتا پرونده خسارت(کلید اصلی جدول پرونده خسارت)"
+        },
+        "LossNumber": {
+          "type": "string",
+          "description": "شماره حواله"
+        },
+        "LossTypeId": {
+          "type": "number",
+          "description": "کد نوع حواله خسارت"
+        },
+        "Amount": {
+          "type": "number",
+          "description": "مبلغ"
+        },
+        "PaymentDate": {
+          "type": "DateTime",
+          "description": "تاریخ واریز وجه"
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "توضیحات"
+        }
+      },
+      "title": "HealthExpertLoss"
+    }
+  }
+}
